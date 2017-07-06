@@ -17,7 +17,7 @@ import application.board.vo.BoardVO;
  */
 public class BoardServiceImpl implements BoardService {
 	
-	//µ¥ÀÌÅÍ¸¦ ºÒ·¯¿À±â À§ÇÑ DAO
+	//ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ê¸° ìœ„í•œ DAO
 	private BoardDao dao = new BoardDao();
 	
 	/**
@@ -25,7 +25,7 @@ public class BoardServiceImpl implements BoardService {
 	 * @parmam : 
 	 * @return : List<BoardVO>
 	 * @throws SQLException 
-	 * @description : µ¥ÀÌÅÍ¸¦ Á¶È¸ÇÑ´Ù.
+	 * @description : ë°ì´í„°ë¥¼ ì¡°íšŒí•œë‹¤.
 	 */
 	public List<BoardVO> selectListBoard(BoardVO boardVO) throws SQLException {
 		
@@ -37,7 +37,7 @@ public class BoardServiceImpl implements BoardService {
 	 * @method : insertBoard
 	 * @parmam : 
 	 * @return : int
-	 * @description : µ¥ÀÌÅÍ¸¦ µî·ÏÇÑ´Ù.
+	 * @description : ë°ì´í„°ë¥¼ ë“±ë¡í•œë‹¤.
 	 */
 	public int insertBoard(BoardVO boardVO) throws SQLException {
 		
@@ -50,7 +50,7 @@ public class BoardServiceImpl implements BoardService {
 	 * @method : updateBoard
 	 * @parmam : 
 	 * @return : int
-	 * @description : µ¥ÀÌÅÍ¸¦ ¼öÁ¤ÇÑ´Ù.
+	 * @description : ë°ì´í„°ë¥¼ ìˆ˜ì •í•œë‹¤.
 	 */
 	public int updateBoard(BoardVO boardVO) throws SQLException {
 		
@@ -63,7 +63,7 @@ public class BoardServiceImpl implements BoardService {
 	 * @parmam : 
 	 * @return : void
 	 * @throws SQLException 
-	 * @description : µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÑ´Ù.
+	 * @description : ë°ì´í„°ë¥¼ ì‚­ì œí•œë‹¤.
 	 */
 	public int deleteBoard(BoardVO boardVO) throws SQLException {
 		
@@ -77,7 +77,7 @@ public class BoardServiceImpl implements BoardService {
 	 * @parmam : 
 	 * @return : List<HashMap<String,String>>
 	 * @throws SQLException 
-	 * @description : HashMapÆÄ¶ó¹ÌÅÍ¿Í List<HashMap> °á°ú¸¦ Á¶È¸
+	 * @description : HashMapíŒŒë¼ë¯¸í„°ì™€ List<HashMap> ê²°ê³¼ë¥¼ ì¡°íšŒ
 	 */
 	public List<HashMap<String, String>> selectListHashMapBoard(HashMap<String, String> boardMap) throws SQLException {
 		return dao.selectListMapBoard(boardMap);
