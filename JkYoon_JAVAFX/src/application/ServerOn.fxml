@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ServerController">
+   <center>
+      <TextArea fx:id="server_area" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="81.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_on" layoutX="173.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#ServerOnClick" text="ServerOn" />
+            <Button fx:id="btn_off" layoutX="376.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#ServerOffClick" text="ServerOff" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

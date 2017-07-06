@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="430.0" prefWidth="322.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test011.Test05JavaFXBaseComponentController">
+  <children>
+    <Label layoutX="43.0" layoutY="41.0" text="성명" />
+    <TextField fx:id="txtName" layoutX="86.0" layoutY="41.0" prefWidth="200.0" />
+    <Label layoutX="43.0" layoutY="75.0" text="성별" />
+    <RadioButton fx:id="radioMan" layoutX="86.0" layoutY="75.0" mnemonicParsing="false" selected="true" text="남자" userData="A">
+      <toggleGroup>
+        <ToggleGroup fx:id="radioGroup" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="radiowoMan" layoutX="140.0" layoutY="75.0" mnemonicParsing="false" text="여자" toggleGroup="$radioGroup" userData="B" />
+    <Label layoutX="43.0" layoutY="109.0" text="지역" />
+    <Label layoutX="43.0" layoutY="142.0" text="취미" />
+    <CheckBox fx:id="chkA" layoutX="86.0" layoutY="139.0" mnemonicParsing="false" text="등산" userData="A" />
+    <CheckBox fx:id="chkB" layoutX="148.0" layoutY="139.0" mnemonicParsing="false" text="독서" userData="B" />
+    <Button layoutX="227.0" layoutY="379.0" mnemonicParsing="false" onAction="#onClickEvent" text="Button" />
+    <TextArea fx:id="txtArea" layoutX="40.0" layoutY="245.0" prefHeight="98.0" prefWidth="243.0" wrapText="true" />
+    <VBox layoutX="43.0" layoutY="153.0" prefHeight="60.0" prefWidth="265.0">
+      <children>
+        <Label fx:id="labelA" prefHeight="28.0" prefWidth="265.0" text="등산은 힘들다" visible="false" />
+        <Label fx:id="labelB" prefHeight="28.0" prefWidth="265.0" text="독서는 재미없다" visible="false" />
+      </children>
+    </VBox>
+    <ComboBox fx:id="areaCombo" layoutX="86.0" layoutY="107.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+  </children>
+</AnchorPane>

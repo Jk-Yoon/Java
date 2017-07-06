@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="CENTER" depthTest="DISABLE" minWidth="-1.0" pickOnBounds="true" spacing="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test01.Test03JavaFxFXMLContoller">
+  <!-- HBox 컨테이너 선언 -->
+  <!-- 컨트롤간의 수평 간격 설정 -->
+  <children>
+    <!-- 자식 컨트롤 추가 -->
+    <TextField fx:id="txt" prefWidth="200.0" styleClass="TextField">
+      <!-- TextField 선언 -->
+      <!-- TextField의 폭 설정 -->
+      <stylesheets>
+        <URL value="@Test03JavaFxFXMLMain.css" />
+      </stylesheets>
+    </TextField>
+    <Button id="my-button" onAction="#onClickEvent" styleClass="num-button" text="확인" wrapText="false">
+      <!-- Button 컨트롤 선언 -->
+      <!-- Button 글자 설정 -->
+      <HBox.margin>
+        <Insets left="10.0" />
+      </HBox.margin>
+    </Button>
+  </children>
+  <padding>
+    <!-- 안쪽 여백 설정 -->
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@Test03JavaFxFXMLMain.css" />
+  </stylesheets>
+</HBox>

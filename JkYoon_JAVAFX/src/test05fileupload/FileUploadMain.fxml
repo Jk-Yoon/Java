@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="258.962890625" prefWidth="395.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test05fileupload.FileUploadMainController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <TextField fx:id="txtField" layoutX="31.0" layoutY="42.0" prefWidth="200.0" />
+    <Button fx:id="btnOpen" layoutX="236.0" layoutY="43.0" mnemonicParsing="false" text="파일열기" />
+    <Button fx:id="btnUpload" layoutX="307.0" layoutY="43.0" mnemonicParsing="false" text="파일업로드" />
+    <Label fx:id="label" layoutX="31.0" layoutY="13.0" prefHeight="29.0" prefWidth="187.0" text="label" />
+    <Hyperlink fx:id="linkDown" layoutX="31.0" layoutY="215.0" prefWidth="200.0" text="Hyperlink" />
+    <ImageView fx:id="viewImage" fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+  </children>
+</AnchorPane>

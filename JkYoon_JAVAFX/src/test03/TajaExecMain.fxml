@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="392.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test03.TajaExecMainController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label fx:id="labelWord" layoutX="58.0" layoutY="32.0" prefHeight="32.962890625" prefWidth="179.0" text="" />
+    <TextField fx:id="txtInput" layoutX="97.0" layoutY="260.0" prefWidth="200.0" />
+    <TextArea fx:id="txtAreaList" editable="false" layoutX="58.0" layoutY="75.0" prefWidth="290.0" wrapText="true" />
+    <Button fx:id="btnStart" layoutX="144.0" layoutY="132.0" mnemonicParsing="false" prefHeight="32.962890625" prefWidth="106.0" text="시작" />
+    <Label fx:id="labelScore" layoutX="229.0" layoutY="32.0" prefHeight="32.962890625" prefWidth="133.0" text="" />
+    <Button fx:id="btnFinish" layoutX="326.0" layoutY="14.0" mnemonicParsing="false" text="종료" />
+    <Label fx:id="labelA" layoutX="43.0" layoutY="263.0" text="단어입력" />
+  </children>
+</Pane>

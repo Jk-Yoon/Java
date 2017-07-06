@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane minHeight="400.0" minWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test012.Test012JavaFxCalculatorMainController">
+   <top>
+      <Pane minHeight="100.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textFieldCalculator" editable="false" layoutX="14.0" layoutY="18.0" prefHeight="67.0" prefWidth="376.0" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+         	<Button fx:id="button_0" layoutX="15.0" layoutY="231.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="137.0" text="0" />
+          	<Button fx:id="button_1" layoutX="15.0" layoutY="157.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="1" />
+            <Button fx:id="button_2" layoutX="92.0" layoutY="157.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="2" />
+            <Button fx:id="button_3" layoutX="170.0" layoutY="157.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="3" />
+            <Button fx:id="button_4" layoutX="15.0" layoutY="83.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="4" />
+            <Button fx:id="button_5" layoutX="92.0" layoutY="83.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="5" />
+            <Button fx:id="button_6" layoutX="170.0" layoutY="83.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="6" />
+            <Button fx:id="button_7" layoutX="15.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="7" />
+            <Button fx:id="button_8" layoutX="92.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="8" />
+            <Button fx:id="button_9" layoutX="170.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="9" />
+            <Button fx:id="button_divide" layoutX="249.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="/" />
+            <Button fx:id="button_multiple" layoutX="249.0" layoutY="83.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="*" />
+            <Button fx:id="button_minus" layoutX="249.0" layoutY="157.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="-" />
+            <Button fx:id="button_plus" layoutX="249.0" layoutY="231.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="+" />
+            <Button fx:id="button_dot" layoutX="170.0" layoutY="231.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="60.0" prefWidth="60.0" text="." />
+            <Button fx:id="button_equal" layoutX="327.0" layoutY="157.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="134.0" prefWidth="60.0" text="=" />
+            <Button fx:id="button_clear" layoutX="327.0" layoutY="10.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onclickButton" prefHeight="134.0" prefWidth="60.0" text="C" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

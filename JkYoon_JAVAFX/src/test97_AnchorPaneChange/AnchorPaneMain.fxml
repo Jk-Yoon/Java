@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test97_AnchorPaneChange.AnchorPaneMainController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane fx:id="paneLeft" layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="124.0">
+      <children>
+        <Button fx:id="btn1" layoutX="33.0" layoutY="87.0" mnemonicParsing="false" text="Button1" />
+        <Button fx:id="btn2" layoutX="33.0" layoutY="129.0" mnemonicParsing="false" text="Button2" />
+      </children>
+    </Pane>
+    <Pane fx:id="paneRight" layoutX="138.0" layoutY="14.0" prefHeight="558.0" prefWidth="448.0" />
+  </children>
+</AnchorPane>

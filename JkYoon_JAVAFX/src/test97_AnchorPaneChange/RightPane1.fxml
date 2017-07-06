@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane prefHeight="558.0" prefWidth="448.0" style="-fx-background-color: #fdfd1d;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Button layoutX="40.0" layoutY="109.0" mnemonicParsing="false" text="Button" />
+    <Button layoutX="195.0" layoutY="200.0" mnemonicParsing="false" text="Button" />
+  </children>
+</Pane>
