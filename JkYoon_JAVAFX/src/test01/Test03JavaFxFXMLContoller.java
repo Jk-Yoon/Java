@@ -12,10 +12,10 @@ import javafx.scene.control.TextField;
  * @class : Test03JavaFxFXMLContoller.java
  * @title : 
  * @author : Yoon
- * @desciption : FXMLÀ» ÀÌ¿ëÇÑ ÀÌº¥Æ® Àû¿ë
+ * @desciption : FXMLì„ ì´ìš©í•œ ì´ë²¤íŠ¸ ì ìš©
  * 
- * 1. textFieldÀ» ¸¸µé°í ¹öÆ°À» ¸¸µç´Ù.
- * 2. ¹öÆ°¿¡ onAction="#onClickEvent"À» Ãß°¡ÇÑ´Ù.
+ * 1. textFieldì„ ë§Œë“¤ê³  ë²„íŠ¼ì„ ë§Œë“ ë‹¤.
+ * 2. ë²„íŠ¼ì— onAction="#onClickEvent"ì„ ì¶”ê°€í•œë‹¤.
  * 
  */
 public class Test03JavaFxFXMLContoller implements Initializable {

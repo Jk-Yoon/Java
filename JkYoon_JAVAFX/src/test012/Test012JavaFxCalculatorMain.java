@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @class : Test012JavaFxCalculatorMain.java
  * @title : 
  * @author : Yoon
- * @desciption : °è»ê±â
+ * @desciption : ê³„ì‚°ê¸°
  */
 public class Test012JavaFxCalculatorMain extends Application {
 

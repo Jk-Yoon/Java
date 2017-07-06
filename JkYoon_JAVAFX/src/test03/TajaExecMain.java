@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @class : TajaExecMain.java
  * @title : 
  * @author : Yoon
- * @desciption : Å¸ÀÚ¿¬½À
+ * @desciption : íƒ€ìì—°ìŠµ
  */
 public class TajaExecMain extends Application{
 

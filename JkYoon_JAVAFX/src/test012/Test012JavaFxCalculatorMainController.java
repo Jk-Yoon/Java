@@ -16,9 +16,9 @@ import javafx.scene.control.TextField;
  * @title : 
  * @author : Yoon
  * @desciption : 
- * 1. ¹öÆ°À» ±×¸°´Ù. 0~9 ´õÇÏ±â ³ª´©±â °öÇÏ±â »©±â
+ * 1. ë²„íŠ¼ì„ ê·¸ë¦°ë‹¤. 0~9 ë”í•˜ê¸° ë‚˜ëˆ„ê¸° ê³±í•˜ê¸° ë¹¼ê¸°
  * 
- * // Java¿¡¼­´Â ScriptEngineÀÌ¶ó´Â Å¬·¡½º¸¦ ÅëÇØ ½ºÅ©¸³ÆÃ ±â´ÉÀ» ±âº»ÀûÀ¸·Î Á¦°øÇÏ°íÀÖ´Ù.
+ * // Javaì—ì„œëŠ” ScriptEngineì´ë¼ëŠ” í´ë˜ìŠ¤ë¥¼ í†µí•´ ìŠ¤í¬ë¦½íŒ… ê¸°ëŠ¥ì„ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ê³ ìˆë‹¤.
 		ScriptEngineManager mgr = new ScriptEngineManager();
 		ScriptEngine engine = mgr.getEngineByName("JavaScript");
 		System.out.println(aaa);
@@ -45,13 +45,13 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 	@FXML private Button button_equal;
 	@FXML private TextField textFieldCalculator;
 	
-	// ¼ıÀÚ ÀúÀåº¯¼ö
+	// ìˆ«ì ì €ì¥ë³€ìˆ˜
 	private double saveNumber = 0.0f;
 	
-	// ¿¬»ê ÀúÀåº¯¼ö
+	// ì—°ì‚° ì €ì¥ë³€ìˆ˜
 	private String saveOperator = "";
 	
-	// ¼ıÀÚÀÎÁö? ¿¬»êÀÎÁö? Ã¼Å© ±¸ºĞÀÚ
+	// ìˆ«ìì¸ì§€? ì—°ì‚°ì¸ì§€? ì²´í¬ êµ¬ë¶„ì
 	private boolean isInitialize = true;
 	
 	
@@ -65,12 +65,12 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 	 * @method : onclickButton
 	 * @parmam : 
 	 * @return : void
-	 * @description : ¹öÆ°ÀÌº¥Æ®
+	 * @description : ë²„íŠ¼ì´ë²¤íŠ¸
 	 */
 	@FXML
 	public void onclickButton(ActionEvent event){
 		
-		// ¹öÆ°ÀÇ ÅØ½ºÆ®¸¦ °¡Á®¿Â´Ù.
+		// ë²„íŠ¼ì˜ í…ìŠ¤íŠ¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 		String btnText = ((Button)event.getTarget()).getText();
 		
 		switch(btnText){
@@ -107,19 +107,19 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 	 * @method : clearCalculate
 	 * @parmam : 
 	 * @return : void
-	 * @description : º¯¼ö Å¬¸®¾î
+	 * @description : ë³€ìˆ˜ í´ë¦¬ì–´
 	 */
 	private void clearCalculate() {
-		// ¼ıÀÚ ÀúÀåº¯¼ö
+		// ìˆ«ì ì €ì¥ë³€ìˆ˜
 		saveNumber = 0.0f;
 		
-		// ¿¬»ê ÀúÀåº¯¼ö
+		// ì—°ì‚° ì €ì¥ë³€ìˆ˜
 		saveOperator = "";
 		
-		// ¼ıÀÚÀÎÁö? ¿¬»êÀÎÁö? Ã¼Å© ±¸ºĞÀÚ
+		// ìˆ«ìì¸ì§€? ì—°ì‚°ì¸ì§€? ì²´í¬ êµ¬ë¶„ì
 		isInitialize = true;
 		
-		//°è»ê±âÃ¢ Å¬¸®¾î
+		//ê³„ì‚°ê¸°ì°½ í´ë¦¬ì–´
 		textFieldCalculator.setText("");
 		
 	}
@@ -128,7 +128,7 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 	 * @method : addNumber
 	 * @parmam : 
 	 * @return : void
-	 * @description : ¼ıÀÚÃß°¡ÇÔ¼ö 
+	 * @description : ìˆ«ìì¶”ê°€í•¨ìˆ˜ 
 	 */
 	public void addNumber(String strNum){
 		System.out.println("addNumber() = " +strNum );
@@ -139,24 +139,24 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 		}
 		isInitialize = false;
 		
-//		// ¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á ¼÷Á¦ ¿µ¿ª Start ¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á
+//		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â–  ìˆ™ì œ ì˜ì—­ Start â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 //		if(textFieldCalculator.getText().indexOf(".") > 1){
-//			System.out.println(".Àº ÇÏ³ª¸¸ Á¸ÀçÇÏ¿©¾ß ÇÕ´Ï´Ù.");
+//			System.out.println(".ì€ í•˜ë‚˜ë§Œ ì¡´ì¬í•˜ì—¬ì•¼ í•©ë‹ˆë‹¤.");
 //		}
 //		
 //		
-//		// . ÀÌ 1°³ÀÏ °æ¿ì
+//		// . ì´ 1ê°œì¼ ê²½ìš°
 //		if(textFieldCalculator.getText().indexOf(".") == 1){
 //			
 //			String[] strTmp = textFieldCalculator.getText().split("\\.");
 //			System.out.println("strTmp[0] = " + strTmp[0]);
-//			// ºó°ø°£ÀÏ°æ¿ì
+//			// ë¹ˆê³µê°„ì¼ê²½ìš°
 //			if(strTmp[0].equals("")){
 //				textFieldCalculator.setText("0.");
 //			}
 //			
 //		}
-//		// ¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á ¼÷Á¦ ¿µ¿ª End ¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á
+//		// â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â–  ìˆ™ì œ ì˜ì—­ End â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– â– 
 		
 		
 	}
@@ -165,8 +165,8 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 	 * @method : calculate
 	 * @parmam : 
 	 * @return : void
-	 * @description : °è»êÇÔ¼ö
-	 * 		saveOperator ¸¦ º°µµ·Î ¾²´Â ÀÌÀ¯´Â ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ°í ¿¬»êÀÚ¸¦ ³Ö°í ´Ù½Ã ¼ıÀÚ¸¦ ³Ö°í °è»êÇØ¾ßÇÏ±â¶§¹®¿¡ Àü¿ªº¯¼ö·Î ³Ö¾úÀ½.
+	 * @description : ê³„ì‚°í•¨ìˆ˜
+	 * 		saveOperator ë¥¼ ë³„ë„ë¡œ ì“°ëŠ” ì´ìœ ëŠ” ìˆ«ìë¥¼ ì…ë ¥í•˜ê³  ì—°ì‚°ìë¥¼ ë„£ê³  ë‹¤ì‹œ ìˆ«ìë¥¼ ë„£ê³  ê³„ì‚°í•´ì•¼í•˜ê¸°ë•Œë¬¸ì— ì „ì—­ë³€ìˆ˜ë¡œ ë„£ì—ˆìŒ.
 	 */
 	public void calculate(String opt){
 		
@@ -195,7 +195,7 @@ public class Test012JavaFxCalculatorMainController implements Initializable {
 					
 			}
 			
-			// ÀÌºÎºĞÀº = ÀÌ´Ù.
+			// ì´ë¶€ë¶„ì€ = ì´ë‹¤.
 			textFieldCalculator.setText(saveNumber+"");
 			System.out.println("saveNumber = " + saveNumber);
 			

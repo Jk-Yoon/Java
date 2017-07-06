@@ -17,7 +17,7 @@ import javafx.scene.layout.Pane;
  * @class : LeftController.java
  * @title : 
  * @author : Yoon
- * @desciption : ·¹ÇÁÆ® ¸Þ´º
+ * @desciption : ë ˆí”„íŠ¸ ë©”ë‰´
  */
 public class LeftController implements Initializable {
 
@@ -32,7 +32,7 @@ public class LeftController implements Initializable {
 	
 	
 	private void eventInit() {
-		// ¹öÆ°1
+		// ë²„íŠ¼1
 		testBtn1.setOnAction(new EventHandler<ActionEvent>() {
 	         @Override 
 	         public void handle(ActionEvent e) {
@@ -52,7 +52,7 @@ public class LeftController implements Initializable {
 	         }
 	     });
 		
-		// ¹öÆ°2
+		// ë²„íŠ¼2
 		testBtn2.setOnAction(new EventHandler<ActionEvent>() {
 	         @Override 
 	         public void handle(ActionEvent e) {

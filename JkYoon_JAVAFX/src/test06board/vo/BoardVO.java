@@ -4,7 +4,7 @@ package test06board.vo;
  * @class : BoardVO.java
  * @title : 
  * @author : Yoon
- * @desciption : °Ô½ÃÆÇÀ» ¸¸µé±âÀ§ÇÑ VO
+ * @desciption : ê²Œì‹œíŒì„ ë§Œë“¤ê¸°ìœ„í•œ VO
  */
 public class BoardVO {
 	private String boardId;

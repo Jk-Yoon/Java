@@ -7,18 +7,18 @@ import javafx.stage.Stage;
  * @class : Test01JavaFxInitMain.java
  * @title : JavaFX01 Test
  * @author : Yoon
- * @desciption : javaFx¿¡ ´ëÇÑ Èå¸§ Ã³¸® main - > »ı¼ºÀÚ - > lunch() - > init() - > start()	 - > stop ÇÔ¼ö ¼øÀ¸·Î Ã³¸®µÈ´Ù´Â °ÍÀ»
- *             º¸¿©ÁÖ´Â ¿¹Á¦
+ * @desciption : javaFxì— ëŒ€í•œ íë¦„ ì²˜ë¦¬ main - > ìƒì„±ì - > lunch() - > init() - > start()	 - > stop í•¨ìˆ˜ ìˆœìœ¼ë¡œ ì²˜ë¦¬ëœë‹¤ëŠ” ê²ƒì„
+ *             ë³´ì—¬ì£¼ëŠ” ì˜ˆì œ
  */
 public class Test01JavaFxInitMain extends Application {
 
 
  
 	/**
-	 * »ı¼ºÀÚ
+	 * ìƒì„±ì
 	 */
 	public Test01JavaFxInitMain() {
-		System.out.println(Thread.currentThread().getName() + ": Test01JavaFxInitMain() È£Ãâ");
+		System.out.println(Thread.currentThread().getName() + ": Test01JavaFxInitMain() í˜¸ì¶œ");
 
 	}
 
@@ -27,28 +27,28 @@ public class Test01JavaFxInitMain extends Application {
 	 */
 	@Override
 	public void init() throws Exception {
-		System.out.println(Thread.currentThread().getName() + ": init() È£Ãâ");
+		System.out.println(Thread.currentThread().getName() + ": init() í˜¸ì¶œ");
 
 	}
 
 	/**
-	 * start ÇÔ¼ö
+	 * start í•¨ìˆ˜
 	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		System.out.println(Thread.currentThread().getName() + ": start() È£Ãâ");
+		System.out.println(Thread.currentThread().getName() + ": start() í˜¸ì¶œ");
 		primaryStage.show();
 	}
 
 	@Override
 	public void stop() throws Exception {
-		System.out.println(Thread.currentThread().getName() + ": stop() È£Ãâ");
+		System.out.println(Thread.currentThread().getName() + ": stop() í˜¸ì¶œ");
 
 	}
 
 	public static void main(String[] args) {
 
-		System.out.println(Thread.currentThread().getName() + ": main() È£Ãâ");
+		System.out.println(Thread.currentThread().getName() + ": main() í˜¸ì¶œ");
 
 		launch(args);
 

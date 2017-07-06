@@ -25,7 +25,7 @@ import javafx.stage.FileChooser;
  * @class : FileUploadMainController.java
  * @title : 
  * @author : Yoon
- * @desciption : ÆÄÀÏ¾÷·Îµå Controller ¿Í ´Ù¿î·Îµå¸¦ °°ÀÌ ÇÑ´Ù.
+ * @desciption : íŒŒì¼ì—…ë¡œë“œ Controller ì™€ ë‹¤ìš´ë¡œë“œë¥¼ ê°™ì´ í•œë‹¤.
  * 
  * 
  * 
@@ -34,26 +34,26 @@ import javafx.stage.FileChooser;
  */
 public class FileUploadMainController implements Initializable {
  
-	// ÆÄÀÏ Á¤º¸¸¦ °¡Áö´Â °´Ã¼
+	// íŒŒì¼ ì •ë³´ë¥¼ ê°€ì§€ëŠ” ê°ì²´
 	File _file;
-	// ÆÄÀÏ ¾÷·Îµå µÇ¾ú´ÂÁö ¾Ë·ÁÁÖ´Â label
+	// íŒŒì¼ ì—…ë¡œë“œ ë˜ì—ˆëŠ”ì§€ ì•Œë ¤ì£¼ëŠ” label
 	@FXML Label label;
-	// ÆÄÀÏ¸í ³ÖÀ» textFiled
+	// íŒŒì¼ëª… ë„£ì„ textFiled
 	@FXML TextField txtField;
-	// ÆÄÀÏ¿­±â ¹öÆ°
+	// íŒŒì¼ì—´ê¸° ë²„íŠ¼
 	@FXML Button btnOpen;
-	// ÆÄÀÏ ¾÷·Îµå ¹öÆ°
+	// íŒŒì¼ ì—…ë¡œë“œ ë²„íŠ¼
 	@FXML Button btnUpload;
 	
 	@FXML Hyperlink linkDown;
 	
-	// imageView ÆÄÀÏ ¾÷·ÎµåÇÑ ÀÌ¹ÌÁö¸¦ º¼°÷
+	// imageView íŒŒì¼ ì—…ë¡œë“œí•œ ì´ë¯¸ì§€ë¥¼ ë³¼ê³³
 	@FXML ImageView viewImage;
 	
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// ÃÊ±âÈ­ ÀÌº¥Æ®
+		// ì´ˆê¸°í™” ì´ë²¤íŠ¸
 		initEvent();
 		
 	}
@@ -62,22 +62,22 @@ public class FileUploadMainController implements Initializable {
 	 * @method : initEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : ÃÊ±âÈ­ ÀÌº¥Æ®
+	 * @description : ì´ˆê¸°í™” ì´ë²¤íŠ¸
 	 */
 	private void initEvent() {
 		 System.out.println("initEvent()");
-		 // ÆÄÀÏ¿ÀÇÂ ÀÌº¥Æ®
+		 // íŒŒì¼ì˜¤í”ˆ ì´ë²¤íŠ¸
         btnOpen.setOnAction(new EventHandler<ActionEvent>(){
             @Override
             public void handle(ActionEvent arg0) {
             	System.out.println("111111111111");
-            	// ÆÄÀÏÀ» ´Ù·ç´Â FXÀÇ ÄÁÆ÷³ÍÆ®
+            	// íŒŒì¼ì„ ë‹¤ë£¨ëŠ” FXì˜ ì»¨í¬ë„ŒíŠ¸
                 FileChooser fileChooser = new FileChooser();
-                // ÆÄÀÏÃ³À½À§Ä¡
+                // íŒŒì¼ì²˜ìŒìœ„ì¹˜
                 fileChooser.setInitialDirectory(new File("D:/"));
-                //ÆÄÀÏ È®ÀåÀÚ ¼³Á¤
+                //íŒŒì¼ í™•ì¥ì ì„¤ì •
                 FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("jpg files (*.jpg)", "*.jpg");
-                //ÆÄÀÏ È®ÀåÀÚ ¼³Á¤
+                //íŒŒì¼ í™•ì¥ì ì„¤ì •
                 fileChooser.getExtensionFilters().add(extFilter);
                 
                 //Stage stage = (Stage) txtField.getScene().getWindow();
@@ -89,10 +89,10 @@ public class FileUploadMainController implements Initializable {
                 }
                 
                 Image image = null;
-                // ÆÄÀÏÀÇ °æ·Î
+                // íŒŒì¼ì˜ ê²½ë¡œ
 				image = new Image(_file.toURI().toString());
                 
-                // ÀÌ¹ÌÁö ºä¾î¿¡ ¼ÂÆÃ
+                // ì´ë¯¸ì§€ ë·°ì–´ì— ì…‹íŒ…
                 viewImage.setImage(image);
                 
                 System.out.println("file.getParent() = "+_file.getParent());
@@ -101,17 +101,17 @@ public class FileUploadMainController implements Initializable {
             }
         });
         
-       // ÆÄÀÏ ¾÷·Îµå ÀÌº¥Æ®
+       // íŒŒì¼ ì—…ë¡œë“œ ì´ë²¤íŠ¸
        btnUpload.setOnAction(new EventHandler<ActionEvent>(){
            @Override
            public void handle(ActionEvent arg0) {
         	   System.out.println("2222");
         	   try {
         		   if(_file != null){
-        			   // ÆÄÀÏ ¾÷·Îµå ¸Ş¼Òµå
+        			   // íŒŒì¼ ì—…ë¡œë“œ ë©”ì†Œë“œ
         			   fileUpload();
         		   }else{
-        			   txtField.setText("ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+        			   txtField.setText("íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         		   }
         		   
             		
@@ -123,14 +123,14 @@ public class FileUploadMainController implements Initializable {
 
        });
        
-       // ÆÄÀÏ ´Ù¿î·Îµå ÀÌº¥Æ®
+       // íŒŒì¼ ë‹¤ìš´ë¡œë“œ ì´ë²¤íŠ¸
        linkDown.setOnAction(new EventHandler<ActionEvent>(){
     	   @Override
 	       public void handle(ActionEvent arg0) {
     		   System.out.println("linkDown.setOnAction");
     		   FileChooser fileChooser = new FileChooser();
     		   
-               //È®ÀåÀÚ¸¦ ¼³Á¤ÇÑ´Ù.
+               //í™•ì¥ìë¥¼ ì„¤ì •í•œë‹¤.
                FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("jpg files (*.jpg)", "*.jpg");
                fileChooser.getExtensionFilters().add(extFilter);
                
@@ -157,24 +157,24 @@ public class FileUploadMainController implements Initializable {
 	 * @method : fileUpload
 	 * @parmam : 
 	 * @return : void
-	 * @description : ÆÄÀÏ¾÷·Îµå 
+	 * @description : íŒŒì¼ì—…ë¡œë“œ 
 	 */
 	private void fileUpload() throws Exception {
 		
 		BufferedInputStream dis = new BufferedInputStream(new FileInputStream(_file));
-		// ÆÄÀÏÀ» src/test05fileupload/À§Ä¡¿¡ ¿Ã¸°´Ù.
+		// íŒŒì¼ì„ src/test05fileupload/ìœ„ì¹˜ì— ì˜¬ë¦°ë‹¤.
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("src/test05fileupload/"+_file.getName()));
 		
 		int b = 0;
 		while((b = dis.read())!=-1){
-          // FileOutputStream¿¡ ÀĞÀº µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+          // FileOutputStreamì— ì½ì€ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 			bos.write(b);
 		}
 		
 		bos.close();
-		label.setText("ÆÄÀÏ¾÷·Îµå°¡ µÇ¾ú½À´Ï´Ù.");
+		label.setText("íŒŒì¼ì—…ë¡œë“œê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		linkDown.setText(_file.getName());
-		System.out.println("ÆÄÀÏ¾÷·Îµå°¡ µÇ¾ú½À´Ï´Ù.");
+		System.out.println("íŒŒì¼ì—…ë¡œë“œê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 	}
 	
@@ -184,19 +184,19 @@ public class FileUploadMainController implements Initializable {
 	 * @parmam : 
 	 * @return : void
 	 * @throws Exception 
-	 * @description : ÆÄÀÏ ´Ù¿î·Îµå
+	 * @description : íŒŒì¼ ë‹¤ìš´ë¡œë“œ
 	 */
 	private void fileDownload(File file) throws Exception {
 		System.out.println("src/test05fileupload/"+_file.getName());
 		
 		BufferedInputStream dis = new BufferedInputStream(new FileInputStream("src/test05fileupload/"+_file.getName()));
 		
-		//È®ÀåÀÚ°¡ ÀúÀåÀÌ ¾ÈµÇ´Â Çö»ó¶§¹®¿¡ ³Ö¾úÀ½.
+		//í™•ì¥ìê°€ ì €ì¥ì´ ì•ˆë˜ëŠ” í˜„ìƒë•Œë¬¸ì— ë„£ì—ˆìŒ.
 		String extension = _file.getName().substring(_file.getName().lastIndexOf('.'), _file.getName().length());
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file+extension));
 		int b = 0;
 		while((b = dis.read())!=-1){
-          // FileOutputStream¿¡ ÀĞÀº µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+          // FileOutputStreamì— ì½ì€ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 			bos.write(b);
           
 		}

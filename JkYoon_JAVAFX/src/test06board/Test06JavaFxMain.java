@@ -12,23 +12,23 @@ import javafx.stage.Stage;
  * @class : Test06JavaFxMain.java
  * @title : 
  * @author : Yoon
- * @desciption :  ¿ÀÁ÷ÀÚ¹Ù·Î¸¸ ¸¸µç °Ô½ÃÆÇ ¸ŞÀÎ ÄÁÆ®·Ñ·¯
- * ÇÁ·Î±×·¥¼ø¼­
- * 01. BorderPane ·¹ÀÌ¾î¸¦ ±×¸°´Ù.
- * 02. Button , ChoiceBox¿Í TableView¸¦ ±×¸°´Ù.
- * 03. Controller¸¦ ¸¸µç´Ù.
- * 03. Controller¿¡ fxmlÀ» ¸í½ÃÇÑ °ªÀ» Àû¾î³õ´Â´Ù.
- * 04. BoardVO.java ¸¦ ¸ÕÀú ¸¸µç´Ù.
- * 05. List°´Ã¼¸¦ ÀÌ¿ëÇÔÀ¸·Î initList()¸¦ ÀÌ¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ ³Ö´Â ÀÛ¾÷À» ÇÑ´Ù.
- * 06. ÀüÃ¼ Á¶È¸°¡ ¸ÕÀú ÇÏµµ·Ï ÇÑ´Ù.
- * 07. µî·Ï¹öÆ°À¸·Î È­¸éÀüÈ¯À» ÇÏµµ·ÏÇÑ´Ù°í ¼³¸íÇÑ´Ù.
- * 08. Test06JavaFxMainDetail.fxml È­¸éÀ» ¸ÕÀú¸¸µé°í
- *     Test06JavaFxMainDetailController.java¸¦ ¸¸µç´Ù.
- * 09. Controller¿¡ fxmlÀ» ¸í½ÃÇÑ °ªÀ» Àû¾î³õ´Â´Ù.
- * 10. µî·Ï¹öÆ°¿¡ ´ëÇÑ ÄÚµùÀ» ÇÑ´Ù. onCreatEvent()
- * 11. Test06JavaFxMainDetailController ¿¡¼­ ÀúÀå¹öÆ°À» onclickSave()ÇÔ¼ö¸¦ ÄÚµùÇÑ´Ù.
- * 12. Test06JavaFxMainController.java¿¡¼­ »èÁ¦¹öÆ°À» Ã³¸®ÇÑ´Ù.
- * 13. Á¶È¸Á¶°ÇÀ¸·Î Á¶È¸°¡ µÇ´Â°ÍÀ» ÄÚµùÇÑ´Ù. selectListData()ÇÔ¼ö¸¦ ÄÚµùÇÑ´Ù.
+ * @desciption :  ì˜¤ì§ìë°”ë¡œë§Œ ë§Œë“  ê²Œì‹œíŒ ë©”ì¸ ì»¨íŠ¸ë¡¤ëŸ¬
+ * í”„ë¡œê·¸ë¨ìˆœì„œ
+ * 01. BorderPane ë ˆì´ì–´ë¥¼ ê·¸ë¦°ë‹¤.
+ * 02. Button , ChoiceBoxì™€ TableViewë¥¼ ê·¸ë¦°ë‹¤.
+ * 03. Controllerë¥¼ ë§Œë“ ë‹¤.
+ * 03. Controllerì— fxmlì„ ëª…ì‹œí•œ ê°’ì„ ì ì–´ë†“ëŠ”ë‹¤.
+ * 04. BoardVO.java ë¥¼ ë¨¼ì € ë§Œë“ ë‹¤.
+ * 05. Listê°ì²´ë¥¼ ì´ìš©í•¨ìœ¼ë¡œ initList()ë¥¼ ì´ìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ë„£ëŠ” ì‘ì—…ì„ í•œë‹¤.
+ * 06. ì „ì²´ ì¡°íšŒê°€ ë¨¼ì € í•˜ë„ë¡ í•œë‹¤.
+ * 07. ë“±ë¡ë²„íŠ¼ìœ¼ë¡œ í™”ë©´ì „í™˜ì„ í•˜ë„ë¡í•œë‹¤ê³  ì„¤ëª…í•œë‹¤.
+ * 08. Test06JavaFxMainDetail.fxml í™”ë©´ì„ ë¨¼ì €ë§Œë“¤ê³ 
+ *     Test06JavaFxMainDetailController.javaë¥¼ ë§Œë“ ë‹¤.
+ * 09. Controllerì— fxmlì„ ëª…ì‹œí•œ ê°’ì„ ì ì–´ë†“ëŠ”ë‹¤.
+ * 10. ë“±ë¡ë²„íŠ¼ì— ëŒ€í•œ ì½”ë”©ì„ í•œë‹¤. onCreatEvent()
+ * 11. Test06JavaFxMainDetailController ì—ì„œ ì €ì¥ë²„íŠ¼ì„ onclickSave()í•¨ìˆ˜ë¥¼ ì½”ë”©í•œë‹¤.
+ * 12. Test06JavaFxMainController.javaì—ì„œ ì‚­ì œë²„íŠ¼ì„ ì²˜ë¦¬í•œë‹¤.
+ * 13. ì¡°íšŒì¡°ê±´ìœ¼ë¡œ ì¡°íšŒê°€ ë˜ëŠ”ê²ƒì„ ì½”ë”©í•œë‹¤. selectListData()í•¨ìˆ˜ë¥¼ ì½”ë”©í•œë‹¤.
  */
 public class Test06JavaFxMain extends Application {
 

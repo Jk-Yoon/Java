@@ -21,17 +21,17 @@ import javafx.util.Duration;
  * @class : Test03ImageSlide.java
  * @title : 
  * @author : Yoon
- * @desciption : ÀÌ¹ÌÁö ½½¶óÀÌµå
+ * @desciption : ì´ë¯¸ì§€ ìŠ¬ë¼ì´ë“œ
  */
 public class Test03ImageSlide extends Application{
 	
 
-	// ±×¸²ÀÇÅ©±â
+	// ê·¸ë¦¼ì˜í¬ê¸°
 	public static final double D = 200;  // diameter.
 	
-	// ±×¸²ÀÇ Å©±â * 6 = ³ôÀÌ
+	// ê·¸ë¦¼ì˜ í¬ê¸° * 6 = ë†’ì´
 	public static final double W = D*6; // canvas dimensions.
-	// ±×¸²ÀÇ Å©±â * 6 = ³Êºñ
+	// ê·¸ë¦¼ì˜ í¬ê¸° * 6 = ë„ˆë¹„
     public static final double H = D*6;
 
     DoubleProperty x  = new SimpleDoubleProperty();
@@ -59,9 +59,9 @@ public class Test03ImageSlide extends Application{
     public void setAnimation(){
     	 
     	
-    	// Timeline ( ¾îµğºÎÅÍ(KeyFrame), ¾îµğ±îÁö(KeyFrame))
-    	// KeyFrame (½Ã°£, KeyValue)
-    	// KeyValue(½ÃÀÛ, Á¾·á)
+    	// Timeline ( ì–´ë””ë¶€í„°(KeyFrame), ì–´ë””ê¹Œì§€(KeyFrame))
+    	// KeyFrame (ì‹œê°„, KeyValue)
+    	// KeyValue(ì‹œì‘, ì¢…ë£Œ)
     	Timeline timeline = new Timeline(
             new KeyFrame(Duration.seconds(0),
             		new KeyValue(x, 0),
@@ -73,9 +73,9 @@ public class Test03ImageSlide extends Application{
             )
         );
     	
-    	// µÇµ¹¸±°ÍÀÎÁö
+    	// ë˜ëŒë¦´ê²ƒì¸ì§€
         timeline.setAutoReverse(true);
-        // ¹«±âÇÑ Àç»ı
+        // ë¬´ê¸°í•œ ì¬ìƒ
         timeline.setCycleCount(Timeline.INDEFINITE);	
         
         
@@ -94,7 +94,7 @@ public class Test03ImageSlide extends Application{
                 System.out.println("x- " + x);
                 System.out.println("y- " + y);
                 
-            	// drawImage(ÀÌ¹ÌÁö, ½ÃÀÛÁöÁ¡, Á¾·áÁöÁ¡, ³Êºñ, ³ôÀÌ)
+            	// drawImage(ì´ë¯¸ì§€, ì‹œì‘ì§€ì , ì¢…ë£Œì§€ì , ë„ˆë¹„, ë†’ì´)
                 gc.drawImage(image1,x.doubleValue(), 0, D, D);		
                 gc.drawImage(image2,x.doubleValue()+D, 0, D, D);
                 gc.drawImage(image3,x.doubleValue()+D*2, 0, D, D);
@@ -102,7 +102,7 @@ public class Test03ImageSlide extends Application{
                 gc.drawImage(image5,x.doubleValue()+D*4, 0, D, D);
                 gc.drawImage(image6,x.doubleValue()+D*5, 0, D, D);
                 
-//              yÃàÀ¸·Î ÀÌµ¿ÇÏ°Ô ÇÏ±â ¼÷Á¦
+//              yì¶•ìœ¼ë¡œ ì´ë™í•˜ê²Œ í•˜ê¸° ìˆ™ì œ
 //              gc.drawImage(image1, 0, y.doubleValue(), D, D);		
 //              gc.drawImage(image2,0, y.doubleValue()+D, D, D);
 //              gc.drawImage(image3,0, y.doubleValue()+D*2, D, D);

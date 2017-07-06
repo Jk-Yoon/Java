@@ -3,7 +3,7 @@ package test03;
  * @class : ComputerWord.java
  * @title : 
  * @author : Yoon
- * @desciption : ´Ü¾îÁý
+ * @desciption : ë‹¨ì–´ì§‘
  */
 public class ComputerWord {
 

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @class : FileUploadMain.java
  * @title : 
  * @author : Yoon
- * @desciption : ÆÄÀÏ¾÷·Îµå
+ * @desciption : íŒŒì¼ì—…ë¡œë“œ
  */
 public class FileUploadMain extends Application  {
 	@Override

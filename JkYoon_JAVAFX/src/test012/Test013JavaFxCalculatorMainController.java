@@ -16,13 +16,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 /**
- * @class : Test012JavaFxCalculatorMainController.java
+ * @class : Test013JavaFxCalculatorMainController.java
  * @title : 
  * @author : Yoon
  * @desciption : 
- * 1. ¹öÆ°À» ±×¸°´Ù. 0~9 ´õÇÏ±â ³ª´©±â °öÇÏ±â »©±â
+ * 1. ë²„íŠ¼ì„ ê·¸ë¦°ë‹¤. 0~9 ë”í•˜ê¸° ë‚˜ëˆ„ê¸° ê³±í•˜ê¸° ë¹¼ê¸°
  * 
- * // Java¿¡¼­´Â ScriptEngineÀÌ¶ó´Â Å¬·¡½º¸¦ ÅëÇØ ½ºÅ©¸³ÆÃ ±â´ÉÀ» ±âº»ÀûÀ¸·Î Á¦°øÇÏ°íÀÖ´Ù.
+ * // Javaì—ì„œëŠ” ScriptEngineì´ë¼ëŠ” í´ë˜ìŠ¤ë¥¼ í†µí•´ ìŠ¤í¬ë¦½íŒ… ê¸°ëŠ¥ì„ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ê³ ìˆë‹¤.
 		ScriptEngineManager mgr = new ScriptEngineManager();
 		ScriptEngine engine = mgr.getEngineByName("JavaScript");
 		System.out.println(aaa);
@@ -49,7 +49,7 @@ public class Test013JavaFxCalculatorMainController implements Initializable {
 	@FXML private Button button_equal;
 	@FXML private TextField textFieldCalculator;
 	
-	// Ã³À½ºÎÅÍ´Ù½Ã
+	// ì²˜ìŒë¶€í„°ë‹¤ì‹œ
 	private boolean isInitialize = true;
 	
 	@Override
@@ -61,12 +61,12 @@ public class Test013JavaFxCalculatorMainController implements Initializable {
 	 * @method : onclickButton
 	 * @parmam : 
 	 * @return : void
-	 * @description : ¹öÆ°ÀÌº¥Æ®
+	 * @description : ë²„íŠ¼ì´ë²¤íŠ¸
 	 */
 	@FXML
 	public void onclickButton(ActionEvent event){
 		
-		// ¹öÆ°ÀÇ ÅØ½ºÆ®¸¦ °¡Á®¿Â´Ù.
+		// ë²„íŠ¼ì˜ í…ìŠ¤íŠ¸ë¥¼ ê°€ì ¸ì˜¨ë‹¤.
 		String btnText = ((Button)event.getTarget()).getText();
 	 
 		switch(btnText){
@@ -103,7 +103,7 @@ public class Test013JavaFxCalculatorMainController implements Initializable {
 	 * @method : clearCalculate
 	 * @parmam : 
 	 * @return : void
-	 * @description : º¯¼ö Å¬¸®¾î
+	 * @description : ë³€ìˆ˜ í´ë¦¬ì–´
 	 */
 	public void clearCalculate(){
 		textFieldCalculator.setText("");
@@ -114,21 +114,21 @@ public class Test013JavaFxCalculatorMainController implements Initializable {
 	 * @method : addNumber
 	 * @parmam : 
 	 * @return : void
-	 * @description : ¼ıÀÚÃß°¡ÇÔ¼ö 
+	 * @description : ìˆ«ìì¶”ê°€í•¨ìˆ˜ 
 	 */
 	public void addNumber(String strNum){
 		
-		// Ã³À½ Ãß°¡ÇÒ¶§
+		// ì²˜ìŒ ì¶”ê°€í• ë•Œ
 		if(isInitialize){
 			
 			textFieldCalculator.setText(textFieldCalculator.getText()+strNum);
 			
 		}else{
-			// ±âÁ¸¿¡ °è»êµÈ °ªÀÌ ÀÖÀ»°æ¿ì »çÄ¢¿¬»êÀÌ¸é
+			// ê¸°ì¡´ì— ê³„ì‚°ëœ ê°’ì´ ìˆì„ê²½ìš° ì‚¬ì¹™ì—°ì‚°ì´ë©´
 			if(strNum.equals("/") || strNum.equals("*") || strNum.equals("-") || strNum.equals("+")){
 				textFieldCalculator.setText(textFieldCalculator.getText()+strNum);
 			}else{
-				// ±âÁ¸¿¡ °è»êµÈ °ªÀÌ ÀÖÀ» °æ¿ì¸é¼­ ¼ıÀÚÀÏ°æ¿ì
+				// ê¸°ì¡´ì— ê³„ì‚°ëœ ê°’ì´ ìˆì„ ê²½ìš°ë©´ì„œ ìˆ«ìì¼ê²½ìš°
 				textFieldCalculator.setText("");
 				textFieldCalculator.setText(textFieldCalculator.getText()+strNum);
 			}
@@ -144,11 +144,11 @@ public class Test013JavaFxCalculatorMainController implements Initializable {
 	 * @method : calculate
 	 * @parmam : 
 	 * @return : void
-	 * @description : °è»êÇÔ¼ö
-	 * 		saveOperator ¸¦ º°µµ·Î ¾²´Â ÀÌÀ¯´Â ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ°í ¿¬»êÀÚ¸¦ ³Ö°í ´Ù½Ã ¼ıÀÚ¸¦ ³Ö°í °è»êÇØ¾ßÇÏ±â¶§¹®¿¡ Àü¿ªº¯¼ö·Î ³Ö¾úÀ½.
+	 * @description : ê³„ì‚°í•¨ìˆ˜
+	 * 		saveOperator ë¥¼ ë³„ë„ë¡œ ì“°ëŠ” ì´ìœ ëŠ” ìˆ«ìë¥¼ ì…ë ¥í•˜ê³  ì—°ì‚°ìë¥¼ ë„£ê³  ë‹¤ì‹œ ìˆ«ìë¥¼ ë„£ê³  ê³„ì‚°í•´ì•¼í•˜ê¸°ë•Œë¬¸ì— ì „ì—­ë³€ìˆ˜ë¡œ ë„£ì—ˆìŒ.
 	 */
 	public void calculate(){ 
-		// Java¿¡¼­´Â ScriptEngineÀÌ¶ó´Â Å¬·¡½º¸¦ ÅëÇØ ½ºÅ©¸³ÆÃ ±â´ÉÀ» ±âº»ÀûÀ¸·Î Á¦°øÇÏ°íÀÖ´Ù.	jdk 1.6¿¡¼­ Á¦°øÇÔ.
+		// Javaì—ì„œëŠ” ScriptEngineì´ë¼ëŠ” í´ë˜ìŠ¤ë¥¼ í†µí•´ ìŠ¤í¬ë¦½íŒ… ê¸°ëŠ¥ì„ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ê³ ìˆë‹¤.	jdk 1.6ì—ì„œ ì œê³µí•¨.
 		ScriptEngineManager mgr = new ScriptEngineManager();
 		ScriptEngine engine = mgr.getEngineByName("JavaScript");
 		

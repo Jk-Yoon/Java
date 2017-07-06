@@ -36,24 +36,24 @@ import javafx.stage.Stage;
  * @class : Test05JavaFXBaseComponentController.java
  * @title : 
  * @author : Yoon
- * @desciption :  TextField, ToggleGroup, ComboBox, CheckBox, LabelÀÌ¿ëÇÏ±â
+ * @desciption :  TextField, ToggleGroup, ComboBox, CheckBox, Labelì´ìš©í•˜ê¸°
  * 
- * ÇÁ·Î±×·¥ ¼ø¼­
-1. ¼º¸í + inputÀ» ±×¸°´Ù. fx:id = "txtName"
-2. ¼ºº° + ¶óµğ¿À¹öÆ° ³²ÀÚ, ¿©ÀÚ¸¦ ±×¸°´Ù.			fx:id="radioMan" fx:id="radiowoMan"	
-	ToggleGroup Àº JavaFX Scence Builder ¿¡¼­ Properties - > specific¿¡ Toggle GroupÀ¸·Î ¼³Á¤
-3. Áö¿ª + ÄŞº¸¹Ú½º¸¦ ±×¸°´Ù.			fx:id="areaCombo"
-4. Ãë¹Ì + Ã¼Å©¹Ú½º¸¦ ±×¸°´Ù.			fx:id="chkA" fx:id="chkB"
-																					5. paneÀ§¿¡ treeView¸¦ ±×¸°´Ù.			fx:id="treeView"
-6. ¹öÆ°À» ±×¸°´Ù.				onAction="#onClickEvent"
-7. txtArea¸¦ ±×¸°´Ù.				fx:id="txtArea"
-8. ¹öÆ° ÀÌº¥Æ® onClickEvent()ÇÔ¼ö¿¡ TextArea¿¡ ³Ö´Â ±¸¹®À» String str¿¡ ´ã´Â´Ù.
- - txtName.getText()  - > TextField°ª°¡Á®¿À±â 
- - radioGroup.getSelectedToggle().getUserData().toString()	- > ToggleGroupÀÇ ¼±ÅÃµÈ °ª °¡Á®¿À±â
- - areaCombo.getSelectionModel().getSelectedItem()=" + areaCombo.getSelectionModel().getSelectedItem() - > combo¹Ú½º °ª°¡Á®¿À±â
- - areaCombo.getSelectionModel().getSelectedIndex()=" + areaCombo.getSelectionModel().getSelectedIndex() - > combo¹Ú½º index°ª°¡ Á®¿À±â
- - chkA.getText()	- > Ã¼Å©¹Ú½ºÀÇ °ª°¡Á®¿À±â
- - chkB.getText()   - > Ã¼Å©¹Ú½ºÀÇ °ª°¡Á®¿À±â
+ * í”„ë¡œê·¸ë¨ ìˆœì„œ
+1. ì„±ëª… + inputì„ ê·¸ë¦°ë‹¤. fx:id = "txtName"
+2. ì„±ë³„ + ë¼ë””ì˜¤ë²„íŠ¼ ë‚¨ì, ì—¬ìë¥¼ ê·¸ë¦°ë‹¤.			fx:id="radioMan" fx:id="radiowoMan"	
+	ToggleGroup ì€ JavaFX Scence Builder ì—ì„œ Properties - > specificì— Toggle Groupìœ¼ë¡œ ì„¤ì •
+3. ì§€ì—­ + ì½¤ë³´ë°•ìŠ¤ë¥¼ ê·¸ë¦°ë‹¤.			fx:id="areaCombo"
+4. ì·¨ë¯¸ + ì²´í¬ë°•ìŠ¤ë¥¼ ê·¸ë¦°ë‹¤.			fx:id="chkA" fx:id="chkB"
+																					5. paneìœ„ì— treeViewë¥¼ ê·¸ë¦°ë‹¤.			fx:id="treeView"
+6. ë²„íŠ¼ì„ ê·¸ë¦°ë‹¤.				onAction="#onClickEvent"
+7. txtAreaë¥¼ ê·¸ë¦°ë‹¤.				fx:id="txtArea"
+8. ë²„íŠ¼ ì´ë²¤íŠ¸ onClickEvent()í•¨ìˆ˜ì— TextAreaì— ë„£ëŠ” êµ¬ë¬¸ì„ String strì— ë‹´ëŠ”ë‹¤.
+ - txtName.getText()  - > TextFieldê°’ê°€ì ¸ì˜¤ê¸° 
+ - radioGroup.getSelectedToggle().getUserData().toString()	- > ToggleGroupì˜ ì„ íƒëœ ê°’ ê°€ì ¸ì˜¤ê¸°
+ - areaCombo.getSelectionModel().getSelectedItem()=" + areaCombo.getSelectionModel().getSelectedItem() - > comboë°•ìŠ¤ ê°’ê°€ì ¸ì˜¤ê¸°
+ - areaCombo.getSelectionModel().getSelectedIndex()=" + areaCombo.getSelectionModel().getSelectedIndex() - > comboë°•ìŠ¤ indexê°’ê°€ ì ¸ì˜¤ê¸°
+ - chkA.getText()	- > ì²´í¬ë°•ìŠ¤ì˜ ê°’ê°€ì ¸ì˜¤ê¸°
+ - chkB.getText()   - > ì²´í¬ë°•ìŠ¤ì˜ ê°’ê°€ì ¸ì˜¤ê¸°
  * 
  * 
  * 
@@ -61,25 +61,25 @@ import javafx.stage.Stage;
  */
 public class Test05JavaFXBaseComponentController implements Initializable {
 	
-	// ¼º¸í
+	// ì„±ëª…
 	@FXML private TextField txtName;
 	
-	// ToggleGroup Àº JavaFX Scence Builder ¿¡¼­ Properties - > specific¿¡ Toggle GroupÀ¸·Î ¼³Á¤ÇÑ´Ù.
+	// ToggleGroup ì€ JavaFX Scence Builder ì—ì„œ Properties - > specificì— Toggle Groupìœ¼ë¡œ ì„¤ì •í•œë‹¤.
 	@FXML private ToggleGroup radioGroup;
  
-	// Áö¿ª
+	// ì§€ì—­
 	@FXML private ComboBox<String> areaCombo;
 	
-	// µî»ê Ã¼Å©¹Ú½º
+	// ë“±ì‚° ì²´í¬ë°•ìŠ¤
 	@FXML private CheckBox chkA;
 	
-	// µ¶¼­ Ã¼Å©¹Ú½º
+	// ë…ì„œ ì²´í¬ë°•ìŠ¤
 	@FXML private CheckBox chkB;
 	
-	// µî»ê ¶óº§
+	// ë“±ì‚° ë¼ë²¨
 	@FXML private Label labelA;
 	
-	// µ¶¼­ ¶óº§
+	// ë…ì„œ ë¼ë²¨
 	@FXML private Label labelB;
 	
 	// TextArea
@@ -93,17 +93,17 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
-		// ComboBox¹Ú½º ÃÊ±âÈ­
-		areaCombo.setValue("¼­¿ï");
+		// ComboBoxë°•ìŠ¤ ì´ˆê¸°í™”
+		areaCombo.setValue("ì„œìš¸");
 		
 		
-		// ComboBox¹Ú½º 
+		// ComboBoxë°•ìŠ¤ 
 		areaCombo.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// ÄŞº¸¹Ú½ºÀÇ ¼±ÅÃµÈ°ªÀ» ¾Ë¼öÀÖ´Ù.
+				// ì½¤ë³´ë°•ìŠ¤ì˜ ì„ íƒëœê°’ì„ ì•Œìˆ˜ìˆë‹¤.
 				System.out.println(areaCombo.getSelectionModel().getSelectedItem());
-				System.out.println("Á¶È¸ÀÌº¥Æ®");
+				System.out.println("ì¡°íšŒì´ë²¤íŠ¸");
 				
 			}}
 				 
@@ -123,7 +123,7 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 //        });
 		
 		
-		// ¶óµğ¿À±×·ì¿¡ ÀÌº¥Æ®ÁÖ±â
+		// ë¼ë””ì˜¤ê·¸ë£¹ì— ì´ë²¤íŠ¸ì£¼ê¸°
 		radioGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
 			@Override
 			public void changed(ObservableValue<? extends Toggle> observable,
@@ -139,7 +139,7 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 		 		
 		
 		
-		// Ã¼Å©¹Ú½º [µî»ê] ÀÌº¥Æ®
+		// ì²´í¬ë°•ìŠ¤ [ë“±ì‚°] ì´ë²¤íŠ¸
 		chkA.setOnAction(new EventHandler<ActionEvent>() {
 			
 			@Override
@@ -153,7 +153,7 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 				}
 			}
 		});
-		// Ã¼Å©¹Ú½º [µ¶¼­] ÀÌº¥Æ®
+		// ì²´í¬ë°•ìŠ¤ [ë…ì„œ] ì´ë²¤íŠ¸
 		chkB.setOnAction(new EventHandler<ActionEvent>() {
 			
 			@Override
@@ -175,7 +175,7 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 	 * @method : onClickEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : Å¬¸¯ ÀÌº¥Æ®
+	 * @description : í´ë¦­ ì´ë²¤íŠ¸
 	 */
 	public void onClickEvent(ActionEvent e ){
 		String str = "";
@@ -187,8 +187,8 @@ public class Test05JavaFXBaseComponentController implements Initializable {
             myDialog.initModality(Modality.WINDOW_MODAL);
            
             
-            // java1.7¿¡´Â AerltÀÌ ¾ø±â¶§¹®¿¡ SceneÀ¸·Î ´ëÃ¼ÇÔ. //			 Alert alert = new Alert(AlertType.INFORMATION);
-            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("¼º¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä"))
+            // java1.7ì—ëŠ” Aerltì´ ì—†ê¸°ë•Œë¬¸ì— Sceneìœ¼ë¡œ ëŒ€ì²´í•¨. //			 Alert alert = new Alert(AlertType.INFORMATION);
+            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("ì„±ëª…ì„ ì…ë ¥í•˜ì„¸ìš”"))
                     .alignment(Pos.CENTER)
                     .padding(new javafx.geometry.Insets(30))
                     .build());
@@ -198,15 +198,15 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 
 		}
 		
-		// ¶óµğ¿À ¹öÆ°ÀÇ °ªÀ» °¡Á®¿À±â À§ÇØ¼­ Çü¹øÈ¯À» ÇÔ.
+		// ë¼ë””ì˜¤ ë²„íŠ¼ì˜ ê°’ì„ ê°€ì ¸ì˜¤ê¸° ìœ„í•´ì„œ í˜•ë²ˆí™˜ì„ í•¨.
 		RadioButton selectedRadio = (RadioButton) radioGroup.getSelectedToggle();
 		
-		str += "¼º¸í = " + txtName.getText() + "\n";
-		str += "¼ºº° =[" + selectedRadio.getText() +"] "+ radioGroup.getSelectedToggle().getUserData().toString()+ "\n";
-		str += "Áö¿ª = " + areaCombo.getSelectionModel().getSelectedItem() + " / " + areaCombo.getSelectionModel().getSelectedIndex()+"¹øÂ°"  + "\n";
-		str += "Ãë¹Ì = " + chkA.getText() + " / " + chkA.getUserData() + "\n";
+		str += "ì„±ëª… = " + txtName.getText() + "\n";
+		str += "ì„±ë³„ =[" + selectedRadio.getText() +"] "+ radioGroup.getSelectedToggle().getUserData().toString()+ "\n";
+		str += "ì§€ì—­ = " + areaCombo.getSelectionModel().getSelectedItem() + " / " + areaCombo.getSelectionModel().getSelectedIndex()+"ë²ˆì§¸"  + "\n";
+		str += "ì·¨ë¯¸ = " + chkA.getText() + " / " + chkA.getUserData() + "\n";
 		if(chkB.isSelected() == true){
-			str += "Ãë¹Ì = " + chkB.getText() + " / " + chkB.getUserData() + "\n";
+			str += "ì·¨ë¯¸ = " + chkB.getText() + " / " + chkB.getUserData() + "\n";
 		}
 		
 		str += "\n";
@@ -246,33 +246,33 @@ public class Test05JavaFXBaseComponentController implements Initializable {
 //	 */
 //	private void initTreeView() {
 //		TreeItem<String> rootItem = new TreeItem<String>("Root");
-//		rootItem.setExpanded(true); // È®Àå¿©ºÎ
+//		rootItem.setExpanded(true); // í™•ì¥ì—¬ë¶€
 //		
 //		TreeItem<String> item = new TreeItem<String>("A");
 //		rootItem.getChildren().add(item);
 //		
 //		item = new TreeItem<String>("B");
 //		rootItem.getChildren().add(item);
-//		treeView.setRoot(rootItem);	// TreeView¿¡ Setting Root½ÃÅ²´Ù.
+//		treeView.setRoot(rootItem);	// TreeViewì— Setting Rootì‹œí‚¨ë‹¤.
 //		
 //		
-//		// treeView ÀÌº¥Æ®
+//		// treeView ì´ë²¤íŠ¸
 //		treeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
 //
 //            @Override
 //            public void changed(
 //                    ObservableValue<? extends TreeItem<String>> observable,
 //                    TreeItem<String> old_val, TreeItem<String> new_val) {
-//            	// ÀÌ ¸Ş¼­µåÀÇ oldValue´Â ÀÌÀü »óÅÂ°ªÀÌ ±â¾ïµÇ¾î ÀÖ°í 
-//				// newValue¿¡´Â º¯°æµÈ »óÅÂ°ªÀÌ ±â¾ïµÇ¾î ÀÖ´Ù.
+//            	// ì´ ë©”ì„œë“œì˜ oldValueëŠ” ì´ì „ ìƒíƒœê°’ì´ ê¸°ì–µë˜ì–´ ìˆê³  
+//				// newValueì—ëŠ” ë³€ê²½ëœ ìƒíƒœê°’ì´ ê¸°ì–µë˜ì–´ ìˆë‹¤.
 //            	
 //            	System.out.println("observable.getValue() = "+observable.getValue());
 //            	System.out.println("observable.getValue().getValue() = "+observable.getValue().getValue());
 //            	
-//            	// ÀÌÀü°ªÀ» ¾Ë¼öÀÖ´Ù.
+//            	// ì´ì „ê°’ì„ ì•Œìˆ˜ìˆë‹¤.
 //            	System.out.println(old_val.getValue());
 //            	
-//            	// ÀÌÈÄ°ªÀ» ¾Ë¼öÀÖ´Ù.
+//            	// ì´í›„ê°’ì„ ì•Œìˆ˜ìˆë‹¤.
 //            	System.out.println(new_val.getValue());
 //            	
 //                TreeItem<String> selectedItem = new_val;

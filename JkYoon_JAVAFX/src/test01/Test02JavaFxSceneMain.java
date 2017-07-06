@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * @class : Test02JavaFxScene.java
  * @title : 
  * @author : Yoon
- * @desciption : Main¹®¿¡ ¸¸µé±â 
+ * @desciption : Mainë¬¸ì— ë§Œë“¤ê¸° 
  */
 public class Test02JavaFxSceneMain extends Application{
 	
@@ -24,35 +24,35 @@ public class Test02JavaFxSceneMain extends Application{
 		launch(args);
 	}
 	
-	Label label = new Label(); 		// ¶óº§
+	Label label = new Label(); 		// ë¼ë²¨
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
 		
 		
-		VBox root = new VBox();   //Parent ÇÏÀ§ °´Ã¼ÀÎ VBox »ı¼º
-		root.setPrefWidth(350);	// VBoxÀÇ ³ĞÀÌ ¼³Á¤
-		root.setPrefHeight(350);// VBoxÀÇ ³ôÀÌ ¼³Á¤
+		VBox root = new VBox();   //Parent í•˜ìœ„ ê°ì²´ì¸ VBox ìƒì„±
+		root.setPrefWidth(350);	// VBoxì˜ ë„“ì´ ì„¤ì •
+		root.setPrefHeight(350);// VBoxì˜ ë†’ì´ ì„¤ì •
 		root.setAlignment(Pos.CENTER);
 		
 		
-		label.setText("start JavaFx");	// text ¼Ó¼º ¼³Á¤
-		label.setFont(new Font(60));	// font ¼Ó¼º¼³Á¤
+		label.setText("start JavaFx");	// text ì†ì„± ì„¤ì •
+		label.setFont(new Font(60));	// font ì†ì„±ì„¤ì •
 		
 		Button btn = new Button();
-		btn.setText("È®ÀÎ");
-		btn.setOnAction(new EventHandler<ActionEvent>() { // Å¬¸¯ÀÌº¥Æ®Ã³¸®
+		btn.setText("í™•ì¸");
+		btn.setOnAction(new EventHandler<ActionEvent>() { // í´ë¦­ì´ë²¤íŠ¸ì²˜ë¦¬
             @Override public void handle(ActionEvent e) {
-            	// Platform.exit(); Application Á¾·á
-            	label.setText("setOnActionÀÌº¥Æ®");
+            	// Platform.exit(); Application ì¢…ë£Œ
+            	label.setText("setOnActionì´ë²¤íŠ¸");
 	            	
             }
         });
 		
 		
-		root.getChildren().add(label);	// vbox¿¡ labelÄÁÆ®·Ñ Ãß°¡
-		root.getChildren().add(btn);	// vbox¿¡ buttonÄÁÆ®·Ñ Ãß°¡
+		root.getChildren().add(label);	// vboxì— labelì»¨íŠ¸ë¡¤ ì¶”ê°€
+		root.getChildren().add(btn);	// vboxì— buttonì»¨íŠ¸ë¡¤ ì¶”ê°€
 		
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("Test02JavaFxScene");

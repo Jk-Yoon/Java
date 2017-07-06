@@ -20,22 +20,22 @@ public class Test02JavaFXTableViewMainString extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		// Å×ÀÌºíºä »ı¼º
+		// í…Œì´ë¸”ë·° ìƒì„±
 		TableView table = new TableView();
 		
-		// Å×ÀÌºí editable ÇÒ¼öÀÖµµ·Ï ÇÏÁö¸¸ ÀÌ°Í¸¸À¸·Î´Â »ç¿ëÇÒ¼ö ¾ø´Ù. ¾Æ·¡ÀÇ ÄÚµù°ú °°ÀÌ »ç¿ëÇØ¾ßÇÑ´Ù. 
+		// í…Œì´ë¸” editable í• ìˆ˜ìˆë„ë¡ í•˜ì§€ë§Œ ì´ê²ƒë§Œìœ¼ë¡œëŠ” ì‚¬ìš©í• ìˆ˜ ì—†ë‹¤. ì•„ë˜ì˜ ì½”ë”©ê³¼ ê°™ì´ ì‚¬ìš©í•´ì•¼í•œë‹¤. 
 		// lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
 	    table.setEditable(true);
 
-	    // Å×ÀÌºíºä¿¡ Ãß°¡ÇÒ Å×ÀÌºíÄÃ·³
+	    // í…Œì´ë¸”ë·°ì— ì¶”ê°€í•  í…Œì´ë¸”ì»¬ëŸ¼
 	    TableColumn firstNameCol = new TableColumn("First Name");
 	   
 	    
 	    
-	    // Å×ÀÌºíÄÃ·³°ú µ¥ÀÌÅÍ¿Í ¹ÙÀÎµå - ÇÁ·ÎÆÛÆ¼ ¹ë·ù ÆÑÅä¸®¸¦ ÅëÇØ BoardVOÀÇ String°ªÀÎ boardId¸¦ ÀÌ ÄÃ·³°ú ¸ÅÄª½ÃÄÑ ¹ÙÀÎµå ÇÑ´Ù.
+	    // í…Œì´ë¸”ì»¬ëŸ¼ê³¼ ë°ì´í„°ì™€ ë°”ì¸ë“œ - í”„ë¡œí¼í‹° ë°¸ë¥˜ íŒ©í† ë¦¬ë¥¼ í†µí•´ BoardVOì˜ Stringê°’ì¸ boardIdë¥¼ ì´ ì»¬ëŸ¼ê³¼ ë§¤ì¹­ì‹œì¼œ ë°”ì¸ë“œ í•œë‹¤.
 	    firstNameCol.setCellValueFactory(new PropertyValueFactory<String, String>("firstName"));
 	    
-	    // ¼³Á¤ÇÑ Å×ÀÌºí ÄÃ·³µéÀ» Å×ÀÌºíºä¿¡ Ãß°¡ÇÑ´Ù.        
+	    // ì„¤ì •í•œ í…Œì´ë¸” ì»¬ëŸ¼ë“¤ì„ í…Œì´ë¸”ë·°ì— ì¶”ê°€í•œë‹¤.        
 	    table.getColumns().addAll(firstNameCol);
 	    
 	    List<String> list = new ArrayList<String>();
@@ -48,11 +48,11 @@ public class Test02JavaFXTableViewMainString extends Application {
 	    	System.out.println(list.get(i));
 	    	
 	    }
-	    // ÄÃ·³ÀÇ MinWidth¸¦ ¼³Á¤ÇÑ´Ù.
+	    // ì»¬ëŸ¼ì˜ MinWidthë¥¼ ì„¤ì •í•œë‹¤.
 	    firstNameCol.setMinWidth(100);
 	  
 	    
-	    //Å×ÀÌºíºä¿¡ ¹ÙÀÎµå µÉ ¿ÉÀú¹öºí¸®½ºÆ®  ºÒ·¯¿Â µ¥ÀÌÅÍ¸¦ FXCollections¸¦ ÅëÇØ ¿ÉÀú¹öºí¸®½ºÆ®·Î º¯È¯
+	    //í…Œì´ë¸”ë·°ì— ë°”ì¸ë“œ ë  ì˜µì €ë²„ë¸”ë¦¬ìŠ¤íŠ¸  ë¶ˆëŸ¬ì˜¨ ë°ì´í„°ë¥¼ FXCollectionsë¥¼ í†µí•´ ì˜µì €ë²„ë¸”ë¦¬ìŠ¤íŠ¸ë¡œ ë³€í™˜
 	    ObservableList<String> observableList = FXCollections.observableArrayList(list);
 	    table.setItems(observableList);
 	    

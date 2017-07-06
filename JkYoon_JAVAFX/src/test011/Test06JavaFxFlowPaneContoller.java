@@ -12,7 +12,7 @@ import javafx.scene.layout.FlowPane;
  * @class : Test06JavaFxFlowPaneContoller.java
  * @title : 
  * @author : Yoon
- * @desciption : FlowPaneÀ» ÀÌ¿ëÇÏ¿© ¹öÆ° ¸¸µé±â.
+ * @desciption : FlowPaneì„ ì´ìš©í•˜ì—¬ ë²„íŠ¼ ë§Œë“¤ê¸°.
  */
 public class Test06JavaFxFlowPaneContoller implements Initializable{
 
@@ -53,7 +53,7 @@ public class Test06JavaFxFlowPaneContoller implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		// ÄÚµùÀ¸·Î Btn ¸¸µå´Â ¹æ¹ı
+		// ì½”ë”©ìœ¼ë¡œ Btn ë§Œë“œëŠ” ë°©ë²•
 		Button btn = new Button();
 
 	    for (int i = 0; i < 8; i++) {

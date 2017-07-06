@@ -34,56 +34,56 @@ import test03.ComputerWord;
  * @desciption : 
  * 
  * 
- * 1. FXML¿¡ ÀÖ´Â fx:id¸¦ Controller ÀÚ¹Ù¿¡  º¯¼ö ¼±¾ğÇÑ´Ù.
- * 2. ÀÌº¥Æ® ÃÊ±âÈ­	intiEvent()
- * 3. ´ÙÀ½´Ü¾î È£Ãâ	setLabelTextSetting()
- * 4. ±ÛÀÚ³»·Á¿À´Â°ÍÀ» ¸ÕÀúÇÏ¿´´Ù.	setDownLabel()
- * 5. ¸Ç¸¶Áö¸·Àº °ÔÀÓÁ¾·á¸¦ ¸¶Áö¸·À¸·ÎÇÑ´Ù.
- * 6. ÁøÂ¥¸Ç¸¶Áö¸·Àº UIÁ¤¸® ¹× ¼Ò½ºÁ¤¸® 
+ * 1. FXMLì— ìˆëŠ” fx:idë¥¼ Controller ìë°”ì—  ë³€ìˆ˜ ì„ ì–¸í•œë‹¤.
+ * 2. ì´ë²¤íŠ¸ ì´ˆê¸°í™”	intiEvent()
+ * 3. ë‹¤ìŒë‹¨ì–´ í˜¸ì¶œ	setLabelTextSetting()
+ * 4. ê¸€ìë‚´ë ¤ì˜¤ëŠ”ê²ƒì„ ë¨¼ì €í•˜ì˜€ë‹¤.	setDownLabel()
+ * 5. ë§¨ë§ˆì§€ë§‰ì€ ê²Œì„ì¢…ë£Œë¥¼ ë§ˆì§€ë§‰ìœ¼ë¡œí•œë‹¤.
+ * 6. ì§„ì§œë§¨ë§ˆì§€ë§‰ì€ UIì •ë¦¬ ë° ì†ŒìŠ¤ì •ë¦¬ 
  */
 public class TajaExec2MainController implements Initializable{
 	
-	// °ÔÀÓ ÆĞ³Ú
+	// ê²Œì„ íŒ¨ë„¬
     @FXML Pane paneGame;
     
-	// Á¡¼ö
+	// ì ìˆ˜
 	@FXML Label labelScore;
 	
-    // ÀÔ·ÂÇÏ´Â°÷
+    // ì…ë ¥í•˜ëŠ”ê³³
  	@FXML TextField txtInput;
     
-	// ±ÛÀÚ ¶óº§
+	// ê¸€ì ë¼ë²¨
 	Label labelWord;
 	
-	//°ÔÀÓ½ÃÀÛ ¹öÆ°
+	//ê²Œì„ì‹œì‘ ë²„íŠ¼
 	@FXML Button btnStart;
 	
-	//°ÔÀÓÁ¾·á ¹öÆ°
+	//ê²Œì„ì¢…ë£Œ ë²„íŠ¼
 	@FXML Button btnEnd;
 	
-	// ´Ü¾î
+	// ë‹¨ì–´
 	String comWord = "";
 	
-	// ´Ü¾îÁı Class
+	// ë‹¨ì–´ì§‘ Class
 	ComputerWord cpWord ;
 	
-	// Á¡¼ö
+	// ì ìˆ˜
 	int score = 0;
 	
-	// °ÔÀÓ ¿À¹ö ÇÃ·¡±×
+	// ê²Œì„ ì˜¤ë²„ í”Œë˜ê·¸
 	boolean gameBoolean = false;
 	
 	
 	/**
-	 * ÃÊ±â½ÇÇà
+	 * ì´ˆê¸°ì‹¤í–‰
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	 
-		// ÀÌº¥Æ® ÃÊ±âÈ­
+		// ì´ë²¤íŠ¸ ì´ˆê¸°í™”
 		intiEvent();
 		 
-		// ´ÙÀ½´Ü¾î È£Ãâ
+		// ë‹¤ìŒë‹¨ì–´ í˜¸ì¶œ
 		setLabelTextSetting();
 		
 		
@@ -94,13 +94,13 @@ public class TajaExec2MainController implements Initializable{
 	 * @method : setLabelTextSetting
 	 * @parmam : 
 	 * @return : void
-	 * @description : ´ÙÀ½´Ü¾î È£Ãâ
+	 * @description : ë‹¤ìŒë‹¨ì–´ í˜¸ì¶œ
 	 */
 	private void setLabelTextSetting() {
 		cpWord = new ComputerWord();
 		String str = cpWord.getComWord();
 		
-		// ÁÂ¿ì·Î ¿Ô´Ù°¬´ÙÇÏ°Ô ÇÏ±âÀ§ÇØ¼­
+		// ì¢Œìš°ë¡œ ì™”ë‹¤ê°”ë‹¤í•˜ê²Œ í•˜ê¸°ìœ„í•´ì„œ
 		int width = ( int )( Math.random() * 500 );
 		
 		System.out.println(width);
@@ -120,7 +120,7 @@ public class TajaExec2MainController implements Initializable{
 	 * @method : intiUI
 	 * @parmam : 
 	 * @return : void
-	 * @description : È­¸é UIÃÊ±âÈ­
+	 * @description : í™”ë©´ UIì´ˆê¸°í™”
 	 */
 	private void intiUI(boolean booleanValue) {
 		txtInput.setVisible(booleanValue);
@@ -135,7 +135,7 @@ public class TajaExec2MainController implements Initializable{
 	 * @method : endGame
 	 * @parmam : 
 	 * @return : void
-	 * @description : °ÔÀÓÁ¾·á ¸Ş¼Òµå
+	 * @description : ê²Œì„ì¢…ë£Œ ë©”ì†Œë“œ
 	 */
 	private void endGame() {
 		
@@ -148,15 +148,15 @@ public class TajaExec2MainController implements Initializable{
             myDialog.initModality(Modality.WINDOW_MODAL);
            
             
-            // java1.7¿¡´Â AerltÀÌ ¾ø±â¶§¹®¿¡ SceneÀ¸·Î ´ëÃ¼ÇÔ. //			 Alert alert = new Alert(AlertType.INFORMATION);
-            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("°ÔÀÓÁ¾·á"))
+            // java1.7ì—ëŠ” Aerltì´ ì—†ê¸°ë•Œë¬¸ì— Sceneìœ¼ë¡œ ëŒ€ì²´í•¨. //			 Alert alert = new Alert(AlertType.INFORMATION);
+            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("ê²Œì„ì¢…ë£Œ"))
                     .alignment(Pos.CENTER)
                     .padding(new javafx.geometry.Insets(30))
                     .build());
             myDialog.setScene(myDialogScene);
             myDialog.show();
             
-            // °ÔÀÓÁ¾·áÇÃ·¡±×
+            // ê²Œì„ì¢…ë£Œí”Œë˜ê·¸
             gameBoolean = true;
             
 			return;
@@ -169,28 +169,28 @@ public class TajaExec2MainController implements Initializable{
 	 * @method : intiEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : ÃÊ±â ÀÌº¥Æ® ¼³Á¤ÇÏ±â
+	 * @description : ì´ˆê¸° ì´ë²¤íŠ¸ ì„¤ì •í•˜ê¸°
 	 */
 	private void intiEvent() { 
 		
-		// °ÔÀÓ½ÃÀÛ ¹öÆ° ÀÌº¥Æ®
+		// ê²Œì„ì‹œì‘ ë²„íŠ¼ ì´ë²¤íŠ¸
 		btnStart.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
 			public void handle(MouseEvent event) {
-				//UI ÃÊ±âÈ­
+				//UI ì´ˆê¸°í™”
 				intiUI(true);
 				
-				// Æ÷Ä¿½º
+				// í¬ì»¤ìŠ¤
 				txtInput.setFocusTraversable(true);	
 				
-				// Label³»·Á¿À°Ô ÇÏ±â
+				// Labelë‚´ë ¤ì˜¤ê²Œ í•˜ê¸°
 				setDownLabel();
 			}
 		});
 		
 		
-		// Á¾·á¹öÆ° ÀÌº¥Æ®
+		// ì¢…ë£Œë²„íŠ¼ ì´ë²¤íŠ¸
 		btnEnd.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
@@ -200,7 +200,7 @@ public class TajaExec2MainController implements Initializable{
 			}
 		});
 		
-		// TextField ¹Ú½º ÀÌº¥Æ®
+		// TextField ë°•ìŠ¤ ì´ë²¤íŠ¸
 		txtInput.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 			@Override
@@ -216,21 +216,21 @@ public class TajaExec2MainController implements Initializable{
 						score += 100;
 						
 						paneGame.getChildren().remove(labelWord);
-						labelScore.setText("Á¡¼ö : " + score);
+						labelScore.setText("ì ìˆ˜ : " + score);
 						
-						//´ÙÀ½´Ü¾î È£Ãâ
+						//ë‹¤ìŒë‹¨ì–´ í˜¸ì¶œ
 						setLabelTextSetting();			  
 					}else{
 						score -= 100;
-						labelScore.setText("Á¡¼ö : " + score);
-						//-300Á¡ ÀÌÇÏ¸é °ÔÀÓÁ¾·á
+						labelScore.setText("ì ìˆ˜ : " + score);
+						//-300ì  ì´í•˜ë©´ ê²Œì„ì¢…ë£Œ
 						
 					}
 					
-					//-300Á¡ ÀÌÇÏ¸é °ÔÀÓÁ¾·á
+					//-300ì  ì´í•˜ë©´ ê²Œì„ì¢…ë£Œ
 					endGame();
 					
-					txtInput.setText(""); // TextField ÃÊ±âÈ­
+					txtInput.setText(""); // TextField ì´ˆê¸°í™”
 					
 				}
 			}
@@ -242,79 +242,79 @@ public class TajaExec2MainController implements Initializable{
 	 * @method : setDownLabel
 	 * @parmam : 
 	 * @return : void
-	 * @description : Label³»·Á¿À°Ô ÇÏ±â
+	 * @description : Labelë‚´ë ¤ì˜¤ê²Œ í•˜ê¸°
 	 */
 	private void setDownLabel() {
 		final Timeline tl = new Timeline();
 		
-		//¹«ÇÑ·çÇÁ·Î µ¹°Ô ÇÒ°ÍÀÎÁö
+		//ë¬´í•œë£¨í”„ë¡œ ëŒê²Œ í• ê²ƒì¸ì§€
 		tl.setCycleCount(Animation.INDEFINITE);
 		
 		
-		// Timeline ( ¾îµğºÎÅÍ(KeyFrame), ¾îµğ±îÁö(KeyFrame))
-    	// KeyFrame (½Ã°£, KeyValue)
-    	// KeyValue(½ÃÀÛ, Á¾·á)
+		// Timeline ( ì–´ë””ë¶€í„°(KeyFrame), ì–´ë””ê¹Œì§€(KeyFrame))
+    	// KeyFrame (ì‹œê°„, KeyValue)
+    	// KeyValue(ì‹œì‘, ì¢…ë£Œ)
 		KeyFrame keyFrameLabelWord = new KeyFrame(Duration.seconds(.0200),
 				new EventHandler<ActionEvent>() {
 
 					public void handle(ActionEvent event) {
 						
-						// YÁÂÇ¥¸¦ +1·ÎÀÌµ¿ ÇÑ´Ù.
+						// Yì¢Œí‘œë¥¼ +1ë¡œì´ë™ í•œë‹¤.
 						labelWord.setTranslateY(labelWord.getTranslateY()+1);
 				
-						// ÇÑ±Û¿öµå°¡ ÆÇ³ÚÀÇ ³ôÀÌ-11 °°°Å³ª ¿öµå°¡ YÁÂÇ¥°¡ Å¬¶§ 
+						// í•œê¸€ì›Œë“œê°€ íŒë„¬ì˜ ë†’ì´-11 ê°™ê±°ë‚˜ ì›Œë“œê°€ Yì¢Œí‘œê°€ í´ë•Œ 
 						if(paneGame.getHeight()-11 <= labelWord.getTranslateY() ){
 							
 							System.out.println("1111111111");
 							score -= 100;
 							
-							tl.impl_finished();// Å¸ÀÓ¶óÀÎ finished
+							tl.impl_finished();// íƒ€ì„ë¼ì¸ finished
 							System.out.println("22222222222222");
 							
-							labelScore.setText("Á¡¼ö : " + score);
+							labelScore.setText("ì ìˆ˜ : " + score);
 							
-							// Á¾·áÇÏ±â À§ÇØ¼­ score°¡ -300ÀÌÇÏ ÀÏ°æ¿ì gameBooleanÀ» trueÃ³¸®ÇÔ.
+							// ì¢…ë£Œí•˜ê¸° ìœ„í•´ì„œ scoreê°€ -300ì´í•˜ ì¼ê²½ìš° gameBooleanì„ trueì²˜ë¦¬í•¨.
 							if(score <= -300){
 								gameBoolean = true; 
 							}
 							
 						}
 						
-			            // °ÔÀÓÁ¾·áÇÃ·¡±×
+			            // ê²Œì„ì¢…ë£Œí”Œë˜ê·¸
 						if(gameBoolean){
-							tl.stop(); // Å¸ÀÓ¶óÀÎ stop
+							tl.stop(); // íƒ€ì„ë¼ì¸ stop
 						}
 						
 					}
 	    });
 		
-		// TimelineÀÌ ³¡³ª¸é
+		// Timelineì´ ëë‚˜ë©´
 		tl.setOnFinished(new EventHandler<ActionEvent>() {
 			
 			@Override
 			public void handle(ActionEvent event) {
 				System.out.println("gameBoolean = " + gameBoolean);
-	            // °ÔÀÓÁ¾·áÇÃ·¡±×
+	            // ê²Œì„ì¢…ë£Œí”Œë˜ê·¸
 				if(gameBoolean){
 					System.out.println("33333333333333333");
 					
-					//-300Á¡ ÀÌÇÏ¸é °ÔÀÓÁ¾·á
+					//-300ì  ì´í•˜ë©´ ê²Œì„ì¢…ë£Œ
 					endGame();
-					// Å¸ÀÓ¶óÀÎ stop
+					// íƒ€ì„ë¼ì¸ stop
 					tl.stop();
 					
-				}else{ // gameBooleanÀÌ falseÀÏ°æ¿ì
+				}else{ // gameBooleanì´ falseì¼ê²½ìš°
 					
-					// ´ÙÀ½´Ü¾î È£Ãâ
+					// ë‹¤ìŒë‹¨ì–´ í˜¸ì¶œ
 					setLabelTextSetting();
 					
-					// »õ·Î¿î ¶óº§À» ³»·Á¿À´Â °ÍÀ» ½ÇÇà ½ÃÅ°±â À§ÇØ¼­
-					setDownLabel(); // ÀÌÇÔ¼ö¸£ Àç±ÍÇÔ¼ö·Î »ç¿ëÇÏ¿´´Ù.
+					// ìƒˆë¡œìš´ ë¼ë²¨ì„ ë‚´ë ¤ì˜¤ëŠ” ê²ƒì„ ì‹¤í–‰ ì‹œí‚¤ê¸° ìœ„í•´ì„œ
+					setDownLabel(); // ì´í•¨ìˆ˜ë¥´ ì¬ê·€í•¨ìˆ˜ë¡œ ì‚¬ìš©í•˜ì˜€ë‹¤.
 				}
 			}
 		});
 		
-        // °ÔÀÓÁ¾·áÇÃ·¡±×
+        // ê²Œì„ì¢…ë£Œí”Œë˜ê·¸
 		if(gameBoolean == false){
 			 System.out.println("4444444444444444444444");
 			 tl.getKeyFrames().add(keyFrameLabelWord);

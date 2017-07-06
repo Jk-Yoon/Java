@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @class : Test06JavaFxFlowPaneMain.java
  * @title : 
  * @author : Yoon
- * @desciption : FlowPaneÀ» ¼³¸íÇÏ±â À§ÇØ¼­ ¹öÆ°À» ³ª¿­ÇÔ.
+ * @desciption : FlowPaneì„ ì„¤ëª…í•˜ê¸° ìœ„í•´ì„œ ë²„íŠ¼ì„ ë‚˜ì—´í•¨.
  */
 public class Test06JavaFxFlowPaneMain extends Application {
 

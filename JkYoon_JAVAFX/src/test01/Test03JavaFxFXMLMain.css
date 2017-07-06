@@ -1,13 +1,13 @@
 
  
-/* ID¿¡ CSSÁÖ´Â °æ¿ì */
+/* IDì— CSSì£¼ëŠ” ê²½ìš° */
 #my-button {
     -fx-text-fill: blue;
     -fx-border-color:  blue;
     -fx-padding: 6  6  6  6;
 }
 
-/* styleClass¿¡ ÁÖ´Â °æ¿ì */
+/* styleClassì— ì£¼ëŠ” ê²½ìš° */
 .num-button  {
     -fx-background-color: white, rgb(189,218,230), white;
     -fx-background-radius: 50%;

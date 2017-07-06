@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  * @author : Yoon
  * @desciption : 
  * 
- * borderPaneÀ» °¡Áö°í Left¸Ş´º¿¡¼­ ¹öÆ° Å¬¸¯½Ã Center¸¦ º¯°æ½ÃÄÑÁÖ´Â ¿¬½À 
+ * borderPaneì„ ê°€ì§€ê³  Leftë©”ë‰´ì—ì„œ ë²„íŠ¼ í´ë¦­ì‹œ Centerë¥¼ ë³€ê²½ì‹œì¼œì£¼ëŠ” ì—°ìŠµ 
  */
 public class BorderMain extends Application{
 

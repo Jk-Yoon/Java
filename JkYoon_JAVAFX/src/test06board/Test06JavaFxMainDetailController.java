@@ -19,23 +19,23 @@ import javafx.stage.Stage;
  * @class : Test06JavaFxMainDetailController.java
  * @title : 
  * @author : Yoon
- * @desciption : µî·Ï/¼öÁ¤/¼öÁ¤/ Controller
+ * @desciption : ë“±ë¡/ìˆ˜ì •/ìˆ˜ì •/ Controller
  */
 public class Test06JavaFxMainDetailController implements Initializable {
 	
-	// ±Û¹øÈ£
+	// ê¸€ë²ˆí˜¸
 	@FXML private TextField txtNo;
 	
-	// Á¦¸ñ
+	// ì œëª©
 	@FXML private TextField txtTitle;
 	
-	// ÀÛ¼ºÀÚ
+	// ì‘ì„±ì
 	@FXML private TextField txtName;
 	
-	// ÀúÀå
+	// ì €ì¥
 	@FXML private Button btnSave;
 	
-	// ¸ñ·Ï
+	// ëª©ë¡
 	@FXML private Button btnList;
 	
 	@Override
@@ -52,18 +52,18 @@ public class Test06JavaFxMainDetailController implements Initializable {
 	 * @description : 
 	 */
 	public void onclickList() throws IOException {
-		// Áß¿ä »õ·Î¿î Stage¸¦ ¸¸µé±â¶§¹®¿¡ ±âÁ¸¿¡ ¾´ Stage¸¦ ¹ö¸®°í »õ·Î¿î°ÍÀ» ¸¸µé±â¶§¹®¿¡ »õ·Î¿î ControllerÀÇ selectListData()ÇÔ¼ö¸¦ ½ÇÇà½ÃÅ²´Ù.
+		// ì¤‘ìš” ìƒˆë¡œìš´ Stageë¥¼ ë§Œë“¤ê¸°ë•Œë¬¸ì— ê¸°ì¡´ì— ì“´ Stageë¥¼ ë²„ë¦¬ê³  ìƒˆë¡œìš´ê²ƒì„ ë§Œë“¤ê¸°ë•Œë¬¸ì— ìƒˆë¡œìš´ Controllerì˜ selectListData()í•¨ìˆ˜ë¥¼ ì‹¤í–‰ì‹œí‚¨ë‹¤.
 		Stage stage = (Stage) txtNo.getScene().getWindow();
-		// Test06JavaFxMain.fxml·Î ºÎÅÍ ÄÄÆ÷³ÍÆ®¸¦ ºÒ·¯¿Í¼­ Scene¿¡ ¹èÄ¡
+		// Test06JavaFxMain.fxmlë¡œ ë¶€í„° ì»´í¬ë„ŒíŠ¸ë¥¼ ë¶ˆëŸ¬ì™€ì„œ Sceneì— ë°°ì¹˜
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Test06JavaFxMain.fxml"));
 		BorderPane root = (BorderPane) loader.load();
 		
-		//fxmml¿¡¼­ ºÒ·¯¿Â ÆĞ³ÎÀ» ¾À¿¡ ¼³Á¤ÇÔ.
+		//fxmmlì—ì„œ ë¶ˆëŸ¬ì˜¨ íŒ¨ë„ì„ ì”¬ì— ì„¤ì •í•¨.
 		Scene scene = new Scene(root);
 		stage.setTitle("Test06JavaFxMain");
-		// ½ºÅ×ÀÌÁö¿¡ ¾ÀÀ» ºÙÀÓ
+		// ìŠ¤í…Œì´ì§€ì— ì”¬ì„ ë¶™ì„
 		stage.setScene(scene);
-		// ½ºÅ×ÀÌÁö¸¦ º¸¿©ÁÜ
+		// ìŠ¤í…Œì´ì§€ë¥¼ ë³´ì—¬ì¤Œ
 		stage.show();
 	}
 	
@@ -72,16 +72,16 @@ public class Test06JavaFxMainDetailController implements Initializable {
 	 * @parmam : 
 	 * @return : void
 	 * @throws IOException 
-	 * @description : ÀúÀå ÀÌº¥Æ®
+	 * @description : ì €ì¥ ì´ë²¤íŠ¸
 	 */
 	public void onclickSave() throws IOException {
 		System.out.println("onclickSave()");
-		//String str = ((Button)e.getTarget()).getText(); ÀÌº¥Æ®¸¦ ÇÏ³ª·Î ÇÒ¶§ ÀÌ·±¹æ¹ıµµ ÀÖ´Ù.
+		//String str = ((Button)e.getTarget()).getText(); ì´ë²¤íŠ¸ë¥¼ í•˜ë‚˜ë¡œ í• ë•Œ ì´ëŸ°ë°©ë²•ë„ ìˆë‹¤.
  
 		String boardId = txtNo.getText();
 		BoardVO boardVO = new BoardVO();
 		 
-		// ½Å±Ô ±Û Ãß°¡
+		// ì‹ ê·œ ê¸€ ì¶”ê°€
 		if("".equals(boardId)){
 			int nextSize = Test06JavaFxMainController.list.size() + 1;
 			String nextSizeIndex = String.valueOf(nextSize);
@@ -92,9 +92,9 @@ public class Test06JavaFxMainDetailController implements Initializable {
 			boardVO.setBoardWriter(txtTitle.getText());
 			boardVO.setBoardContent(txtName.getText());
 			
-			//°´Ã¼Ãß°¡
+			//ê°ì²´ì¶”ê°€
 			Test06JavaFxMainController.list.add(boardVO);
-		}else{ // ¼öÁ¤ÇÏ±â
+		}else{ // ìˆ˜ì •í•˜ê¸°
 			boardVO.setBoardId(txtNo.getText());
 			boardVO.setBoardTitle(txtTitle.getText());
 			boardVO.setBoardWriter(txtTitle.getText());
@@ -114,21 +114,21 @@ public class Test06JavaFxMainDetailController implements Initializable {
 		}
 		 
 		
-		// Áß¿ä »õ·Î¿î Stage¸¦ ¸¸µé±â¶§¹®¿¡ ±âÁ¸¿¡ ¾´ Stage¸¦ ¹ö¸®°í »õ·Î¿î°ÍÀ» ¸¸µé±â¶§¹®¿¡ »õ·Î¿î ControllerÀÇ selectListData()ÇÔ¼ö¸¦ ½ÇÇà½ÃÅ²´Ù.
+		// ì¤‘ìš” ìƒˆë¡œìš´ Stageë¥¼ ë§Œë“¤ê¸°ë•Œë¬¸ì— ê¸°ì¡´ì— ì“´ Stageë¥¼ ë²„ë¦¬ê³  ìƒˆë¡œìš´ê²ƒì„ ë§Œë“¤ê¸°ë•Œë¬¸ì— ìƒˆë¡œìš´ Controllerì˜ selectListData()í•¨ìˆ˜ë¥¼ ì‹¤í–‰ì‹œí‚¨ë‹¤.
 		Stage stage = (Stage) txtNo.getScene().getWindow();
-		// Test06JavaFxMain.fxml·Î ºÎÅÍ ÄÄÆ÷³ÍÆ®¸¦ ºÒ·¯¿Í¼­ Scene¿¡ ¹èÄ¡
+		// Test06JavaFxMain.fxmlë¡œ ë¶€í„° ì»´í¬ë„ŒíŠ¸ë¥¼ ë¶ˆëŸ¬ì™€ì„œ Sceneì— ë°°ì¹˜
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Test06JavaFxMain.fxml"));
 		BorderPane root = (BorderPane) loader.load();
 		
-		// ¸ŞÀÎÃ¢ÀÇ ÄÁÆ®·Ñ·¯¸¦ °¡Á®¿Í¼­
+		// ë©”ì¸ì°½ì˜ ì»¨íŠ¸ë¡¤ëŸ¬ë¥¼ ê°€ì ¸ì™€ì„œ
 		Test06JavaFxMainController mainController = loader.getController();
 		
-		//fxmml¿¡¼­ ºÒ·¯¿Â ÆĞ³ÎÀ» ¾À¿¡ ¼³Á¤ÇÔ.
+		//fxmmlì—ì„œ ë¶ˆëŸ¬ì˜¨ íŒ¨ë„ì„ ì”¬ì— ì„¤ì •í•¨.
 		Scene scene = new Scene(root);
 		stage.setTitle("Test06JavaFxMain");
-		// ½ºÅ×ÀÌÁö¿¡ ¾ÀÀ» ºÙÀÓ
+		// ìŠ¤í…Œì´ì§€ì— ì”¬ì„ ë¶™ì„
 		stage.setScene(scene);
-		// ½ºÅ×ÀÌÁö¸¦ º¸¿©ÁÜ
+		// ìŠ¤í…Œì´ì§€ë¥¼ ë³´ì—¬ì¤Œ
 		stage.show();
 		
 		mainController.selectListData();
@@ -139,7 +139,7 @@ public class Test06JavaFxMainDetailController implements Initializable {
 	 * @method : setBoarderData
 	 * @parmam : 
 	 * @return : void
-	 * @description : ¹ÙÀÎµù½ÃÅ²´Ù.
+	 * @description : ë°”ì¸ë”©ì‹œí‚¨ë‹¤.
 	 */
 	public void setBoarderData(BoardVO boardVo) {
 		

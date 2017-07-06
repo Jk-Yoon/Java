@@ -16,19 +16,19 @@ import javafx.stage.Stage;
  * @class : Test04JavaFxEventTest.java
  * @title : 
  * @author : Yoon
- * @desciption : ¹öÆ°ÀÌº¥Æ® Ã³¸®¹æ¹ı 4°¡Áö ¹æ¹ı ¼³¸í
+ * @desciption : ë²„íŠ¼ì´ë²¤íŠ¸ ì²˜ë¦¬ë°©ë²• 4ê°€ì§€ ë°©ë²• ì„¤ëª…
  * 
  */
 public class Test04JavaFxEventTest extends Application {
-	Button btn1 = new Button("Ã¹¹øÂ°");
-	Button btn2 = new Button("µÎ¹øÂ°");
+	Button btn1 = new Button("ì²«ë²ˆì§¸");
+	Button btn2 = new Button("ë‘ë²ˆì§¸");
 	
 	TextArea txtArea = new TextArea();
 	
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// VBox¸¦ ·çÆ®·Î ÁØ´Ù.
+		// VBoxë¥¼ ë£¨íŠ¸ë¡œ ì¤€ë‹¤.
 		VBox root = new VBox(10);
 		root.setPadding(new Insets(10));
 		
@@ -38,15 +38,15 @@ public class Test04JavaFxEventTest extends Application {
 		//-------------------------------------
 		
 		/*
-			ÀÌº¥Æ® Ã³¸® ¹æ¹ı 1
-			°´Ã¼.setOnÀÌº¥Æ®¸í() ¸Ş¼­µå¿¡ EventHandlerÀÎÅÍÆäÀÌ½º¸¦ ÀÍ¸íÇÔ¼ö Çü½ÄÀ¸·Î ±¸ÇöÇÑ´Ù.
-			(ÀÌ ÀÎÅÍÆäÀÌ½º¿¡´Â handleÀÌ¶ó´Â ¸Ş¼­µå°¡ ÀÖ´Âµ¥ ÀÌ ¸Ş¼­µå¿¡ Ã³¸®ÇÒ ³»¿ëÀ» ±â¼úÇÑ´Ù.)
+			ì´ë²¤íŠ¸ ì²˜ë¦¬ ë°©ë²• 1
+			ê°ì²´.setOnì´ë²¤íŠ¸ëª…() ë©”ì„œë“œì— EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼ ìµëª…í•¨ìˆ˜ í˜•ì‹ìœ¼ë¡œ êµ¬í˜„í•œë‹¤.
+			(ì´ ì¸í„°í˜ì´ìŠ¤ì—ëŠ” handleì´ë¼ëŠ” ë©”ì„œë“œê°€ ìˆëŠ”ë° ì´ ë©”ì„œë“œì— ì²˜ë¦¬í•  ë‚´ìš©ì„ ê¸°ìˆ í•œë‹¤.)
 		*/
 		btn1.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				// ÀÌ°÷¿¡ Ã³¸®ÇÒ ³»¿ëÀ» ±â¼úÇÑ´Ù.
-				txtArea.setText("Ã¹¹øÂ° ¹öÆ°ÀÔ´Ï´Ù.");
+				// ì´ê³³ì— ì²˜ë¦¬í•  ë‚´ìš©ì„ ê¸°ìˆ í•œë‹¤.
+				txtArea.setText("ì²«ë²ˆì§¸ ë²„íŠ¼ì…ë‹ˆë‹¤.");
 				
 			}}
 				 
@@ -54,31 +54,31 @@ public class Test04JavaFxEventTest extends Application {
 		
 		//-------------------------------------------------------
 		/*
-			¹æ¹ı2
-			°´Ã¼.addEventHandler()¸Ş¼­µå¸¦ »ç¿ëÇÑ´Ù.
-			==> ÀÌ ¸Ş¼­µåÀÇ Ã¹¹øÂ° ¸Å°³º¯¼ö·Î ÀÌº¥Æ®ÀÇ Á¾·ù(ÀÌº¥Æ®¸í)¸¦
-				ÁöÁ¤ÇÏ°í, µÎ¹øÂ° ¸Å°³º¯¼ö´Â EventHandlerÀÎÅÍÆäÀÌ½º¸¦
-				±¸ÇöÇÑ °´Ã¼¸¦ ÁöÁ¤ÇÑ´Ù.
+			ë°©ë²•2
+			ê°ì²´.addEventHandler()ë©”ì„œë“œë¥¼ ì‚¬ìš©í•œë‹¤.
+			==> ì´ ë©”ì„œë“œì˜ ì²«ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ë¡œ ì´ë²¤íŠ¸ì˜ ì¢…ë¥˜(ì´ë²¤íŠ¸ëª…)ë¥¼
+				ì§€ì •í•˜ê³ , ë‘ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ëŠ” EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼
+				êµ¬í˜„í•œ ê°ì²´ë¥¼ ì§€ì •í•œë‹¤.
 		*/
 		btn2.addEventHandler(ActionEvent.ACTION, 
 			 	new EventHandler<Event>() {
 					public void handle(Event event){
-						txtArea.setText("µÎ¹øÂ° ¹öÆ°ÀÔ´Ï´Ù.");
+						txtArea.setText("ë‘ë²ˆì§¸ ë²„íŠ¼ì…ë‹ˆë‹¤.");
 					}
 				} 
 		);
 		
-		Button btn3 = new Button("¼¼¹øÂ°");
-		// ¹æ¹ı 3-2
-		// setOnAction()¸Ş¼­µåÀÇ ¸Å°³º¯¼ö·Î EventHandlerÀÎÅÍÆäÀÌ½º¸¦
-		// ±¸ÇöÇÑ °´Ã¼¸¦ »ı¼ºÇØ¼­ ³Ö¾îÁØ´Ù.
+		Button btn3 = new Button("ì„¸ë²ˆì§¸");
+		// ë°©ë²• 3-2
+		// setOnAction()ë©”ì„œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼
+		// êµ¬í˜„í•œ ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ë„£ì–´ì¤€ë‹¤.
 		// btn3.setonAction(new MyEventHandler);
 		
-		//addEventHandler()¸Ş¼­µåÀÇ µÎ¹øÂ° ¸Å°³º¯¼ö¿¡EventHandlerÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ °´Ã¼¸¦ »ı¼ºÇØ¼­ ³Ö¾îÁØ´Ù.
+		//addEventHandler()ë©”ì„œë“œì˜ ë‘ë²ˆì§¸ ë§¤ê°œë³€ìˆ˜ì—EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ë„£ì–´ì¤€ë‹¤.
 		btn3.addEventFilter(ActionEvent.ACTION, new MyEventHandler());
 		
-		Button btn4 = new Button("³×¹øÂ°");
-		// ¹æ¹ı 4-2
+		Button btn4 = new Button("ë„¤ë²ˆì§¸");
+		// ë°©ë²• 4-2
 		btn4.setOnAction(new MyEventHandler2(txtArea));
 		
 		
@@ -86,7 +86,7 @@ public class Test04JavaFxEventTest extends Application {
 		root.getChildren().addAll(hbox, txtArea);
 		
 		Scene scene = new Scene(root, 320, 200);
-		primaryStage.setTitle("Event¼³Á¤ ¿¬½À");
+		primaryStage.setTitle("Eventì„¤ì • ì—°ìŠµ");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
@@ -98,14 +98,14 @@ public class Test04JavaFxEventTest extends Application {
 	}
 		//--------------------------------------
 		/*
-			¹æ¹ı3-1
-			innerÅ¬·¡½º·Î EventHandlerÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º¸¦ ÀÛ¼ºÇÑ´Ù.
+			ë°©ë²•3-1
+			innerí´ë˜ìŠ¤ë¡œ EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤ë¥¼ ì‘ì„±í•œë‹¤.
 		*/
 		class MyEventHandler implements EventHandler<ActionEvent>{
 
 			@Override
 			public void handle(ActionEvent event) {
-				txtArea.setText("¼¼¹øÂ° inner Å¬·¡½º¸¦ ÀÌ¿ëÇÑ ÀÌº¥Æ® Ã³¸®");
+				txtArea.setText("ì„¸ë²ˆì§¸ inner í´ë˜ìŠ¤ë¥¼ ì´ìš©í•œ ì´ë²¤íŠ¸ ì²˜ë¦¬");
 			}
 			
 		}
@@ -113,9 +113,9 @@ public class Test04JavaFxEventTest extends Application {
 
 		//---------------------------------------
 		/*
-		  ¹æ¹ı 4-1
-		  ¿ÜºÎÀÇ µ¶¸³µÈ ÇüÅÂÀÇ °´Ã¼¸¦ ÀÌ¿ëÇÏ´Â ¹æ¹ı
-		  --> ÀÌ °´Ã¼µµ EventHandlerÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇØ¾ßÇÑ´Ù,
+		  ë°©ë²• 4-1
+		  ì™¸ë¶€ì˜ ë…ë¦½ëœ í˜•íƒœì˜ ê°ì²´ë¥¼ ì´ìš©í•˜ëŠ” ë°©ë²•
+		  --> ì´ ê°ì²´ë„ EventHandlerì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•´ì•¼í•œë‹¤,
 		*/
 class MyEventHandler2 implements EventHandler<ActionEvent>{
 	private TextArea txtArea;
@@ -126,7 +126,7 @@ class MyEventHandler2 implements EventHandler<ActionEvent>{
 	
 	@Override
 	public void handle(ActionEvent event) {
-		txtArea.setText("³×¹øÂ° ¿ÜºÎÅ¬·¡½º¸¦ ÀÌ¿ëÇÏ´Â ¹æ¹ı");
+		txtArea.setText("ë„¤ë²ˆì§¸ ì™¸ë¶€í´ë˜ìŠ¤ë¥¼ ì´ìš©í•˜ëŠ” ë°©ë²•");
 	}
 }
 	

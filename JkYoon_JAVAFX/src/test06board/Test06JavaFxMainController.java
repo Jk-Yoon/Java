@@ -35,66 +35,66 @@ import test06board.vo.BoardVO;
  * @class : Test06JavaFxMainController.java
  * @title : 
  * @author : Yoon
- * @desciption : °Ô½ÃÆÇ ¸ŞÀÎ ÄÁÆ®·Ñ·¯
+ * @desciption : ê²Œì‹œíŒ ë©”ì¸ ì»¨íŠ¸ë¡¤ëŸ¬
  * 
- * ¿ÀÁ÷ÀÚ¹Ù·Î¸¸ ¸¸µç °Ô½ÃÆÇ ¸ŞÀÎ ÄÁÆ®·Ñ·¯
- * ÇÁ·Î±×·¥¼ø¼­
- * 01. BorderPane ·¹ÀÌ¾î¸¦ ±×¸°´Ù.
- * 02. Button , ChoiceBox¿Í TableView¸¦ ±×¸°´Ù.
- * 03. Controller¸¦ ¸¸µç´Ù.
- * 03. Controller¿¡ fxmlÀ» ¸í½ÃÇÑ °ªÀ» Àû¾î³õ´Â´Ù.
- * 04. BoardVO.java ¸¦ ¸ÕÀú ¸¸µç´Ù.
- * 05. List°´Ã¼¸¦ ÀÌ¿ëÇÔÀ¸·Î initList()¸¦ ÀÌ¿ëÇÏ¿© µ¥ÀÌÅÍ¸¦ ³Ö´Â ÀÛ¾÷À» ÇÑ´Ù.
- * 06. ÀüÃ¼ Á¶È¸°¡ ¸ÕÀú ÇÏµµ·Ï ÇÑ´Ù.
- * 07. µî·Ï¹öÆ°À¸·Î È­¸éÀüÈ¯À» ÇÏµµ·ÏÇÑ´Ù°í ¼³¸íÇÑ´Ù.
- * 08. Test06JavaFxMainDetail.fxml È­¸éÀ» ¸ÕÀú¸¸µé°í
- *    Test06JavaFxMainDetailController.java¸¦ ¸¸µç´Ù.
- * 09. Controller¿¡ fxmlÀ» ¸í½ÃÇÑ °ªÀ» Àû¾î³õ´Â´Ù.
- * 10. µî·Ï¹öÆ°¿¡ ´ëÇÑ ÄÚµùÀ» ÇÑ´Ù. onCreatEvent()
- * 11. Test06JavaFxMainDetailController ¿¡¼­ ÀúÀå¹öÆ°À» onclickSave()ÇÔ¼ö¸¦ ÄÚµùÇÑ´Ù.
- * 12. Test06JavaFxMainController.java¿¡¼­ »èÁ¦¹öÆ°À» Ã³¸®ÇÑ´Ù.
- * 13. Á¶È¸Á¶°ÇÀ¸·Î Á¶È¸°¡ µÇ´Â°ÍÀ» ÄÚµùÇÑ´Ù. selectListData()ÇÔ¼ö¸¦ ÄÚµùÇÑ´Ù.
+ * ì˜¤ì§ìë°”ë¡œë§Œ ë§Œë“  ê²Œì‹œíŒ ë©”ì¸ ì»¨íŠ¸ë¡¤ëŸ¬
+ * í”„ë¡œê·¸ë¨ìˆœì„œ
+ * 01. BorderPane ë ˆì´ì–´ë¥¼ ê·¸ë¦°ë‹¤.
+ * 02. Button , ChoiceBoxì™€ TableViewë¥¼ ê·¸ë¦°ë‹¤.
+ * 03. Controllerë¥¼ ë§Œë“ ë‹¤.
+ * 03. Controllerì— fxmlì„ ëª…ì‹œí•œ ê°’ì„ ì ì–´ë†“ëŠ”ë‹¤.
+ * 04. BoardVO.java ë¥¼ ë¨¼ì € ë§Œë“ ë‹¤.
+ * 05. Listê°ì²´ë¥¼ ì´ìš©í•¨ìœ¼ë¡œ initList()ë¥¼ ì´ìš©í•˜ì—¬ ë°ì´í„°ë¥¼ ë„£ëŠ” ì‘ì—…ì„ í•œë‹¤.
+ * 06. ì „ì²´ ì¡°íšŒê°€ ë¨¼ì € í•˜ë„ë¡ í•œë‹¤.
+ * 07. ë“±ë¡ë²„íŠ¼ìœ¼ë¡œ í™”ë©´ì „í™˜ì„ í•˜ë„ë¡í•œë‹¤ê³  ì„¤ëª…í•œë‹¤.
+ * 08. Test06JavaFxMainDetail.fxml í™”ë©´ì„ ë¨¼ì €ë§Œë“¤ê³ 
+ *    Test06JavaFxMainDetailController.javaë¥¼ ë§Œë“ ë‹¤.
+ * 09. Controllerì— fxmlì„ ëª…ì‹œí•œ ê°’ì„ ì ì–´ë†“ëŠ”ë‹¤.
+ * 10. ë“±ë¡ë²„íŠ¼ì— ëŒ€í•œ ì½”ë”©ì„ í•œë‹¤. onCreatEvent()
+ * 11. Test06JavaFxMainDetailController ì—ì„œ ì €ì¥ë²„íŠ¼ì„ onclickSave()í•¨ìˆ˜ë¥¼ ì½”ë”©í•œë‹¤.
+ * 12. Test06JavaFxMainController.javaì—ì„œ ì‚­ì œë²„íŠ¼ì„ ì²˜ë¦¬í•œë‹¤.
+ * 13. ì¡°íšŒì¡°ê±´ìœ¼ë¡œ ì¡°íšŒê°€ ë˜ëŠ”ê²ƒì„ ì½”ë”©í•œë‹¤. selectListData()í•¨ìˆ˜ë¥¼ ì½”ë”©í•œë‹¤.
  * 
  */
 public class Test06JavaFxMainController implements Initializable {
 			
-	// Á¶È¸Á¶°Ç ±¸ºĞ
+	// ì¡°íšŒì¡°ê±´ êµ¬ë¶„
 	@FXML private ChoiceBox<String> comboBoxSearchGubun;
 	
-	// Å×ÀÌºíºä¾î
+	// í…Œì´ë¸”ë·°ì–´
 	@FXML private TableView<BoardVO> tableView;
 	
-	// °Ë»ö¹öÆ°
+	// ê²€ìƒ‰ë²„íŠ¼
 	@FXML private Button btnSearch;
 	
-	// »èÁ¦¹öÆ°
+	// ì‚­ì œë²„íŠ¼
 	@FXML private Button btnDelete;
 	
-	// ÅØ½ºÆ® ÇÊµå ¼³Á¤
+	// í…ìŠ¤íŠ¸ í•„ë“œ ì„¤ì •
 	@FXML private TextField txtNm;
 	
-	// Å×ÀÌºíºä ÄÃ·³ ¼³Á¤
+	// í…Œì´ë¸”ë·° ì»¬ëŸ¼ ì„¤ì •
 	@FXML private TableColumn<BoardVO, String> tableCol_boardId;
 	@FXML private TableColumn<BoardVO, String> tableCol_boardTitle;
 	@FXML private TableColumn<BoardVO, String> tableCol_boardWriter;
 	
 	
-	// ÀúÀå°´Ã¼
+	// ì €ì¥ê°ì²´
 	public static List<BoardVO> list = new ArrayList<BoardVO>();
 	
 	
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// ¸®½ºÆ®°¡ ¾øÀ»°æ¿ì¸¸
+		// ë¦¬ìŠ¤íŠ¸ê°€ ì—†ì„ê²½ìš°ë§Œ
 		if(list.size() == 0){
-			initList(); //¸®½ºÆ®°ª ÃÊ±âÈ­
+			initList(); //ë¦¬ìŠ¤íŠ¸ê°’ ì´ˆê¸°í™”
 		}
 		
-		// Å×ÀÌºíºä ¼³Á¤
+		// í…Œì´ë¸”ë·° ì„¤ì •
 		setTableView(); 
 		
-		// ÄŞº¸¹Ú½º ¼³Á¤
+		// ì½¤ë³´ë°•ìŠ¤ ì„¤ì •
 		setComboBox();
 		 
 	}
@@ -128,7 +128,7 @@ public class Test06JavaFxMainController implements Initializable {
 		boardVO.setBoardContent("setBoardContent3");
 		list.add(boardVO);
 		
-		// List µ¿±âÈ­
+		// List ë™ê¸°í™”
 		Collections.synchronizedList(list);
 	}
 	
@@ -136,21 +136,21 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @method : setTableView
 	 * @parmam : 
 	 * @return : void
-	 * @description : Å×ÀÌºíºä ¼³Á¤ 
+	 * @description : í…Œì´ë¸”ë·° ì„¤ì • 
 	 */
 	public void setTableView(){
 		
-		// Å×ÀÌºí ÄÃ·³¼³Á¤
+		// í…Œì´ë¸” ì»¬ëŸ¼ì„¤ì •
 		tableCol_boardId.setCellValueFactory(new PropertyValueFactory<BoardVO, String>("boardId"));
 		tableCol_boardTitle.setCellValueFactory(new PropertyValueFactory<BoardVO, String> ("boardTitle"));
 		tableCol_boardWriter.setCellValueFactory(new PropertyValueFactory<BoardVO, String> ("boardWriter"));
 		
-		// ´õºíÅ¬¸¯ ÀÌº¥Æ®
+		// ë”ë¸”í´ë¦­ ì´ë²¤íŠ¸
 		tableView.setOnMousePressed(new EventHandler<MouseEvent>() {
 		
 			@Override
 			public void handle(MouseEvent event) {
-				if(event.isPrimaryButtonDown() && event.getClickCount() == 2){ // ¿ŞÂÊ, ´õºíÅ¬¸¯ÀÏ °æ¿ì
+				if(event.isPrimaryButtonDown() && event.getClickCount() == 2){ // ì™¼ìª½, ë”ë¸”í´ë¦­ì¼ ê²½ìš°
 					
 					try {
 						
@@ -161,11 +161,11 @@ public class Test06JavaFxMainController implements Initializable {
 						BorderPane pane = (BorderPane) loader.load();
 					
 						Scene scene = new Scene(pane);
-						stage.setTitle("»ó¼¼/¼öÁ¤");
+						stage.setTitle("ìƒì„¸/ìˆ˜ì •");
 						stage.setScene(scene);
 						stage.show();
 	
-						// ¼ø¼­°¡ ¹¹°¡ ÀÖ´Â°Í°°À½. loader.load()¸¦ ÇØ¾ß  loader.getController()¸¦ °¡Á®¿Ã¼öÀÖ´Ù.
+						// ìˆœì„œê°€ ë­ê°€ ìˆëŠ”ê²ƒê°™ìŒ. loader.load()ë¥¼ í•´ì•¼  loader.getController()ë¥¼ ê°€ì ¸ì˜¬ìˆ˜ìˆë‹¤.
 						Test06JavaFxMainDetailController detailController = loader.getController();
 						detailController.setBoarderData(boardVo);
 					 
@@ -185,12 +185,12 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @method : setComboBox
 	 * @parmam : 
 	 * @return : void
-	 * @description : ÄŞº¸¹Ú½º ¼³Á¤
+	 * @description : ì½¤ë³´ë°•ìŠ¤ ì„¤ì •
 	 */
 	public void setComboBox() {
 		comboBoxSearchGubun.getItems().removeAll("Item 1", "Item 2", "Item 3");
-		comboBoxSearchGubun.getItems().addAll("Á¦¸ñ", "ÀÛ¼ºÀÚ");
-		comboBoxSearchGubun.setValue("Á¦¸ñ");
+		comboBoxSearchGubun.getItems().addAll("ì œëª©", "ì‘ì„±ì");
+		comboBoxSearchGubun.setValue("ì œëª©");
 		
 	}
 	
@@ -199,7 +199,7 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @method : onClickEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : Á¶È¸ ÀÌº¥Æ®
+	 * @description : ì¡°íšŒ ì´ë²¤íŠ¸
 	 */
 	public void onClickEvent(){
 		selectListData();
@@ -209,7 +209,7 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @method : selectListData
 	 * @parmam : 
 	 * @return : void
-	 * @description : Á¶È¸ ÀÌº¥Æ®
+	 * @description : ì¡°íšŒ ì´ë²¤íŠ¸
 	 */
 	public void selectListData(){
 		System.out.println("selectListData()");
@@ -219,9 +219,9 @@ public class Test06JavaFxMainController implements Initializable {
 			
 			BoardVO boardVo = new BoardVO();
 			
-			// °Ë»ö°á°ú°¡ ÀÖÀ»°æ¿ì
+			// ê²€ìƒ‰ê²°ê³¼ê°€ ìˆì„ê²½ìš°
 			List<BoardVO> searchResultList = new ArrayList<BoardVO>();
-			//searchResultList.addAll(list);	//list°´Ã¼¸¦ º¹»çÇÑ´Ù.
+			//searchResultList.addAll(list);	//listê°ì²´ë¥¼ ë³µì‚¬í•œë‹¤.
 
 			
 			for(int i = 0 ; i < list.size() ; i++){
@@ -229,14 +229,14 @@ public class Test06JavaFxMainController implements Initializable {
 				boardVo = list.get(i);
 				
 				System.out.println("comboBoxSearchGubun.getValue() = " + comboBoxSearchGubun.getValue());
-				if(comboBoxSearchGubun.getValue().equals("Á¦¸ñ")){
-					// °Ë»öÁ¶°ÇÀ¸·Î Á¶È¸ÇÑ´Ù.
+				if(comboBoxSearchGubun.getValue().equals("ì œëª©")){
+					// ê²€ìƒ‰ì¡°ê±´ìœ¼ë¡œ ì¡°íšŒí•œë‹¤.
 					if(boardVo.getBoardTitle().contains(searchText)){
 						System.out.println("boardVo.getBoardTitle() = "+boardVo.getBoardTitle());
 						searchResultList.add(boardVo);
 						
 					}
-				}else if(comboBoxSearchGubun.getValue().equals("ÀÛ¼ºÀÚ")){
+				}else if(comboBoxSearchGubun.getValue().equals("ì‘ì„±ì")){
 					if(boardVo.getBoardWriter().contains(searchText)){
 						System.out.println("boardVo.getBoardWriter() = "+boardVo.getBoardWriter());
 						searchResultList.add(boardVo);
@@ -249,7 +249,7 @@ public class Test06JavaFxMainController implements Initializable {
 			
 		}else{
 			System.out.println("else");
-			//ºÒ·¯¿Â µ¥ÀÌÅÍ¸¦ FXCollections¸¦ ÅëÇØ ¿ÉÀú¹öºí¸®½ºÆ®·Î º¯È¯
+			//ë¶ˆëŸ¬ì˜¨ ë°ì´í„°ë¥¼ FXCollectionsë¥¼ í†µí•´ ì˜µì €ë²„ë¸”ë¦¬ìŠ¤íŠ¸ë¡œ ë³€í™˜
 			data = FXCollections.observableArrayList(list);
 			
 			for(int i = 0 ; i < list.size(); i++){
@@ -258,7 +258,7 @@ public class Test06JavaFxMainController implements Initializable {
 			
 		}
 		 
-		//Å×ÀÌºíºä¿¡ ¿ÉÀú¹öºí ¸®½ºÆ®¸¦ ¹ÙÀÎµå
+		//í…Œì´ë¸”ë·°ì— ì˜µì €ë²„ë¸” ë¦¬ìŠ¤íŠ¸ë¥¼ ë°”ì¸ë“œ
 		tableView.setItems(data);
 		
 	}
@@ -267,14 +267,14 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @method : onDeleteEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : »èÁ¦ ÀÌº¥Æ®
+	 * @description : ì‚­ì œ ì´ë²¤íŠ¸
 	 */
 	public void onDeleteEvent(ActionEvent e){
 		BoardVO boardVO = tableView.getSelectionModel().getSelectedItem();
 		
-		//¸®½ºÆ® °´Ã¼ »èÁ¦
+		//ë¦¬ìŠ¤íŠ¸ ê°ì²´ ì‚­ì œ
 		list.remove(boardVO);
-		// Å×ÀÌºí ºä¿¡¼­ »èÁ¦ÇÏ±â
+		// í…Œì´ë¸” ë·°ì—ì„œ ì‚­ì œí•˜ê¸°
 		tableView.getItems().remove(boardVO);
 		 
 	}
@@ -284,7 +284,7 @@ public class Test06JavaFxMainController implements Initializable {
 	 * @parmam : 
 	 * @return : void
 	 * @throws IOException 
-	 * @description : µî·Ï ÀÌº¥Æ®
+	 * @description : ë“±ë¡ ì´ë²¤íŠ¸
 	 */
 	public void onCreatEvent(ActionEvent e) throws IOException{
 		
@@ -292,7 +292,7 @@ public class Test06JavaFxMainController implements Initializable {
 			System.out.println(" getBoardContent = "+list.get(i).getBoardContent());
 		}
 		
-		//String str = ((Button)e.getTarget()).getText(); ÀÌº¥Æ®¸¦ ÇÏ³ª·Î ÇÒ¶§ ÀÌ·±¹æ¹ıµµ ÀÖ´Ù.
+		//String str = ((Button)e.getTarget()).getText(); ì´ë²¤íŠ¸ë¥¼ í•˜ë‚˜ë¡œ í• ë•Œ ì´ëŸ°ë°©ë²•ë„ ìˆë‹¤.
 		Stage stage = (Stage) tableView.getScene().getWindow();
 		
 		

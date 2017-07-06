@@ -36,7 +36,7 @@ public class Test04BounBall extends Application {
 		
 	}
 	
-	//Àû±×¸®±â
+	//ì ê·¸ë¦¬ê¸°
 	private void intiEnemy(final Scene scene) {
 		
 		Rectangle rec = new Rectangle(50, 50);

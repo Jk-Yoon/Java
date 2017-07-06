@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @class : AnchorPaneMain.java
  * @title : 
  * @author : Yoon
- * @desciption : AnchorPane ¸Ş´º¸¦ ¼±ÅÃÇÏ¸é ¿À¸¥ÂÊ PaneÀÌ º¯°æµÇµµ·ÏÇÏ±â
+ * @desciption : AnchorPane ë©”ë‰´ë¥¼ ì„ íƒí•˜ë©´ ì˜¤ë¥¸ìª½ Paneì´ ë³€ê²½ë˜ë„ë¡í•˜ê¸°
  */
 public class AnchorPaneMain extends Application{
 

@@ -26,48 +26,48 @@ import javafx.stage.Stage;
  * @class : TajaExecMainController.java
  * @title : 
  * @author : Yoon
- * @desciption : Å¸ÀÚ¿¬½À
- * 1. FXML¿¡ ÀÖ´Â fx:id¸¦ Controller ÀÚ¹Ù¿¡  º¯¼ö ¼±¾ğÇÑ´Ù.
- * 2. UI ÃÊ±âÈ­ intiUI();
- * 3. ÀÌº¥Æ®ÃÊ±âÈ­	intiEvent();
+ * @desciption : íƒ€ìì—°ìŠµ
+ * 1. FXMLì— ìˆëŠ” fx:idë¥¼ Controller ìë°”ì—  ë³€ìˆ˜ ì„ ì–¸í•œë‹¤.
+ * 2. UI ì´ˆê¸°í™” intiUI();
+ * 3. ì´ë²¤íŠ¸ì´ˆê¸°í™”	intiEvent();
  * 
  * 
  */
 public class TajaExecMainController implements Initializable{
 
-	// ´Ü¾î³ª¿À´Â°÷
+	// ë‹¨ì–´ë‚˜ì˜¤ëŠ”ê³³
 	@FXML Label labelWord;
-	// Á¡¼ö
+	// ì ìˆ˜
 	@FXML Label labelScore;
-	// ÀÔ·ÂÇÏ´Â°÷
+	// ì…ë ¥í•˜ëŠ”ê³³
 	@FXML TextField txtInput;
-	// ½ÃÀÛ¹öÆ°
+	// ì‹œì‘ë²„íŠ¼
 	@FXML Button btnStart;
-	// Á¾·á¹öÆ°
+	// ì¢…ë£Œë²„íŠ¼
 	@FXML Button btnFinish;
-	// textArea ¹®ÀÚ¿­ ³Ö±â
+	// textArea ë¬¸ìì—´ ë„£ê¸°
 	String textAreaStr = "";
-	// ÅØ½ºÆ® area
+	// í…ìŠ¤íŠ¸ area
 	@FXML TextArea txtAreaList;
-	// ´Ü¾î
+	// ë‹¨ì–´
 	String comWord = "";
-	// Á¡¼ö
+	// ì ìˆ˜
 	int score = 0;
 	
 	
-	// ´Ü¾îÀÔ·Â
+	// ë‹¨ì–´ì…ë ¥
 	@FXML Label labelA;
 	
-	// ÄÄÇ»ÅÍÀÇ ´Ü¾î¸¦ ¾ò¾î ¿Â´Ù.
+	// ì»´í“¨í„°ì˜ ë‹¨ì–´ë¥¼ ì–»ì–´ ì˜¨ë‹¤.
 	ComputerWord cpWord = new ComputerWord();	
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		// UI ÃÊ±â ¼³Á¤
+		// UI ì´ˆê¸° ì„¤ì •
 		intiUI(false);
 		
-		// ÃÊ±â ÀÌº¥Æ® ¼³Á¤ÇÏ±â
+		// ì´ˆê¸° ì´ë²¤íŠ¸ ì„¤ì •í•˜ê¸°
 		intiEvent();
 		 
 	}
@@ -76,7 +76,7 @@ public class TajaExecMainController implements Initializable{
 	 * @method : intiUI
 	 * @parmam : 
 	 * @return : void
-	 * @description : UI ÃÊ±â ¼³Á¤
+	 * @description : UI ì´ˆê¸° ì„¤ì •
 	 */
 	private void intiUI(boolean booleanValue) {
 		txtAreaList.setVisible(booleanValue);
@@ -91,10 +91,10 @@ public class TajaExecMainController implements Initializable{
 	 * @method : intiEvent
 	 * @parmam : 
 	 * @return : void
-	 * @description : ÃÊ±â ÀÌº¥Æ® ¼³Á¤ÇÏ±â
+	 * @description : ì´ˆê¸° ì´ë²¤íŠ¸ ì„¤ì •í•˜ê¸°
 	 */
 	private void intiEvent() {
-		// °ÔÀÓ½ºÅ¸Æ® ÀÌº¥Æ®
+		// ê²Œì„ìŠ¤íƒ€íŠ¸ ì´ë²¤íŠ¸
 		btnStart.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
@@ -105,7 +105,7 @@ public class TajaExecMainController implements Initializable{
 			}
 		});
 		
-		// input ¹Ú½º ÀÌº¥Æ®
+		// input ë°•ìŠ¤ ì´ë²¤íŠ¸
 		txtInput.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 			@Override
@@ -113,31 +113,31 @@ public class TajaExecMainController implements Initializable{
 				if(event.getCode()==KeyCode.ENTER){
 //					System.out.println("Key Pressed: " + txtInput.getText());
 //					System.out.println("["+labelWord+"]" + "["+txtInput.getText()+"]");
-					// ¶óº§¿¡¼­ ³ª¿Â ±ÛÀÚ¿Í ÅØ½ºÆ®ÇÊµåinput¿¡¼­ ³ª¿Â ±ÛÀÚ°¡ °°À»°æ¿ì
+					// ë¼ë²¨ì—ì„œ ë‚˜ì˜¨ ê¸€ìì™€ í…ìŠ¤íŠ¸í•„ë“œinputì—ì„œ ë‚˜ì˜¨ ê¸€ìê°€ ê°™ì„ê²½ìš°
 					if(labelWord.getText().equals(txtInput.getText())){
 						
 						System.out.println("wwwwwwwwww");
 						score += 100;
-						labelScore.setText("Á¤´ä Á¡¼ö : " + score);
+						labelScore.setText("ì •ë‹µ ì ìˆ˜ : " + score);
 					}else{
 						score -= 100;
-						labelScore.setText("¿À´ä Á¡¼ö : " + score);
+						labelScore.setText("ì˜¤ë‹µ ì ìˆ˜ : " + score);
 					}
 					
-					textAreaStr += "´ç½ÅÀÌ Ä£´Ü¾î´Â : " + txtInput.getText() + "\n\n"; 
+					textAreaStr += "ë‹¹ì‹ ì´ ì¹œë‹¨ì–´ëŠ” : " + txtInput.getText() + "\n\n"; 
 					
 					txtAreaList.setText(textAreaStr);
 					
 					nextWord();
-					txtInput.setText(""); // TextField ÃÊ±âÈ­
+					txtInput.setText(""); // TextField ì´ˆê¸°í™”
 					
 					if(score == -300){
 						Stage myDialog = new Stage();
-						//½ºÅ×ÀÌÁö ¾ç½ÄÀ» ÁöÁ¤ÇÑ´Ù.
-						// APPLICATION_MODALºÎ¸ğÃ¢À¸·Î ¸ø°¡°Ô ÇÏ´Â°Í
+						//ìŠ¤í…Œì´ì§€ ì–‘ì‹ì„ ì§€ì •í•œë‹¤.
+						// APPLICATION_MODALë¶€ëª¨ì°½ìœ¼ë¡œ ëª»ê°€ê²Œ í•˜ëŠ”ê²ƒ
 			            myDialog.initModality(Modality.WINDOW_MODAL  ); 
-						// java1.7¿¡´Â AerltÀÌ ¾ø±â¶§¹®¿¡ SceneÀ¸·Î ´ëÃ¼ÇÔ. //			 Alert alert = new Alert(AlertType.INFORMATION);
-			            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("°ÔÀÓÁ¾·á"))
+						// java1.7ì—ëŠ” Aerltì´ ì—†ê¸°ë•Œë¬¸ì— Sceneìœ¼ë¡œ ëŒ€ì²´í•¨. //			 Alert alert = new Alert(AlertType.INFORMATION);
+			            Scene myDialogScene = new Scene(VBoxBuilder.create().children(new Text("ê²Œì„ì¢…ë£Œ"))
 			                    .alignment(Pos.CENTER)
 			                    .padding(new javafx.geometry.Insets(30))
 			                    .build());
@@ -149,7 +149,7 @@ public class TajaExecMainController implements Initializable{
 			}
 		});
 		
-		// Á¾·á¹öÆ° ÀÌº¥Æ®
+		// ì¢…ë£Œë²„íŠ¼ ì´ë²¤íŠ¸
 		btnFinish.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
@@ -166,15 +166,15 @@ public class TajaExecMainController implements Initializable{
 	 * @method : startGame
 	 * @parmam : 
 	 * @return : void
-	 * @description : °ÔÀÓ½ÃÀÛÇÔ¼ö
+	 * @description : ê²Œì„ì‹œì‘í•¨ìˆ˜
 	 */
 	private void startGame() {
 		System.out.println("StartGame");
 		
-		// Æ÷Ä¿½º
+		// í¬ì»¤ìŠ¤
 		txtInput.setFocusTraversable(true);	
 		
-		// ´ÙÀ½´Ü¾î °¡Á®¿À´Â ÇÔ¼ö
+		// ë‹¤ìŒë‹¨ì–´ ê°€ì ¸ì˜¤ëŠ” í•¨ìˆ˜
 		nextWord();
 		
 		System.out.println( comWord );
@@ -186,18 +186,18 @@ public class TajaExecMainController implements Initializable{
 	 * @method : nextWord
 	 * @parmam : 
 	 * @return : void
-	 * @description : ´ÙÀ½´Ü¾î ¶óº§¿¡ ³Ö±â
+	 * @description : ë‹¤ìŒë‹¨ì–´ ë¼ë²¨ì— ë„£ê¸°
 	 */
 	private void nextWord() {
 		
 		comWord	= cpWord.getComWord();
 		labelWord.setText(comWord);
-		labelWord.setFont(new Font("Arial", 15)); // ÆùÆ®»çÀÌÁî ¼³Á¤
+		labelWord.setFont(new Font("Arial", 15)); // í°íŠ¸ì‚¬ì´ì¦ˆ ì„¤ì •
 		
-		textAreaStr += "ÀÌ¹ø´Ü¾î´Â : " +comWord + "\n"; 
+		textAreaStr += "ì´ë²ˆë‹¨ì–´ëŠ” : " +comWord + "\n"; 
 		txtAreaList.setText(textAreaStr);
 		
-		// ½ºÅ©·Ñ ¸Ç¹ØÀ¸·Î º¸³»´Â ¼Ó¼º
+		// ìŠ¤í¬ë¡¤ ë§¨ë°‘ìœ¼ë¡œ ë³´ë‚´ëŠ” ì†ì„±
 		txtAreaList.setScrollTop(Double.MAX_VALUE);  
 	}
 

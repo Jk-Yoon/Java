@@ -12,21 +12,21 @@ import javafx.stage.Stage;
  * @class : Test03JavaFxFXML.java
  * @title : 
  * @author : Yoon
- * @desciption : FXML·Î È­¸é ·ÎµåÇÏ´Â ¹æ¹ı
+ * @desciption : FXMLë¡œ í™”ë©´ ë¡œë“œí•˜ëŠ” ë°©ë²•
  */
 public class Test03JavaFxFXMLMain extends Application {
 
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		// fxmlÆÄÀÏÀ» ÀĞ¾î¿Í ÇöÀç Stage¿¡ Àû¿ëÇÏ´Â ¹æ¹ı
-		// Parent°´Ã¼ -> ÄÁÆ®·Ñ °´Ã¼µé Áß ÃÖ»óÀ§ Ãß»ó Å¬·¡½º
+		// fxmlíŒŒì¼ì„ ì½ì–´ì™€ í˜„ì¬ Stageì— ì ìš©í•˜ëŠ” ë°©ë²•
+		// Parentê°ì²´ -> ì»¨íŠ¸ë¡¤ ê°ì²´ë“¤ ì¤‘ ìµœìƒìœ„ ì¶”ìƒ í´ë˜ìŠ¤
 		
-		/** ¹æ¹ı1
+		/** ë°©ë²•1
 		Parent root = FXMLLoader.load(getClass().getResource("Test03JavaFxFXML.fxml"));
 		**/
 		
-		// ¹æ¹ı 2
+		// ë°©ë²• 2
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Test03JavaFxFXML.fxml"));
 		Parent root = (Parent) loader.load();		
 	

@@ -12,24 +12,24 @@ import javafx.stage.Stage;
  * @class : Test05JavaFXBaseComponentMain.java
  * @title : 
  * @author : Yoon
- * @desciption : TextField, ToggleGroup, ComboBox, CheckBox, LabelÀÌ¿ëÇÏ±â
+ * @desciption : TextField, ToggleGroup, ComboBox, CheckBox, Labelì´ìš©í•˜ê¸°
  * 
- *  * ÇÁ·Î±×·¥ ¼ø¼­
-1. ¼º¸í + inputÀ» ±×¸°´Ù. fx:id = "txtName"
-2. ¼ºº° + ¶óµğ¿À¹öÆ° ³²ÀÚ, ¿©ÀÚ¸¦ ±×¸°´Ù.			fx:id="radioMan" fx:id="radiowoMan"	
-	ToggleGroup Àº JavaFX Scence Builder ¿¡¼­ Properties - > specific¿¡ Toggle GroupÀ¸·Î ¼³Á¤
-3. Áö¿ª + ÄŞº¸¹Ú½º¸¦ ±×¸°´Ù.			fx:id="areaCombo"
-4. Ãë¹Ì + Ã¼Å©¹Ú½º¸¦ ±×¸°´Ù.			fx:id="chkA" fx:id="chkB"
-5. paneÀ§¿¡ treeView¸¦ ±×¸°´Ù.			fx:id="treeView"
-6. ¹öÆ°À» ±×¸°´Ù.				onAction="#onClickEvent"
-7. txtArea¸¦ ±×¸°´Ù.				fx:id="txtArea"
-8. ¹öÆ° ÀÌº¥Æ® onClickEvent()ÇÔ¼ö¿¡ TextArea¿¡ ³Ö´Â ±¸¹®À» String str¿¡ ´ã´Â´Ù.
- - txtName.getText()  - > TextField°ª°¡Á®¿À±â 
- - radioGroup.getSelectedToggle().getUserData().toString()	- > ToggleGroupÀÇ ¼±ÅÃµÈ °ª °¡Á®¿À±â
- - areaCombo.getSelectionModel().getSelectedItem()=" + areaCombo.getSelectionModel().getSelectedItem() - > combo¹Ú½º °ª°¡Á®¿À±â
- - areaCombo.getSelectionModel().getSelectedIndex()=" + areaCombo.getSelectionModel().getSelectedIndex() - > combo¹Ú½º index°ª°¡ Á®¿À±â
- - chkA.getText()	- > Ã¼Å©¹Ú½ºÀÇ °ª°¡Á®¿À±â
- - chkB.getText()   - > Ã¼Å©¹Ú½ºÀÇ °ª°¡Á®¿À±â
+ *  * í”„ë¡œê·¸ë¨ ìˆœì„œ
+1. ì„±ëª… + inputì„ ê·¸ë¦°ë‹¤. fx:id = "txtName"
+2. ì„±ë³„ + ë¼ë””ì˜¤ë²„íŠ¼ ë‚¨ì, ì—¬ìë¥¼ ê·¸ë¦°ë‹¤.			fx:id="radioMan" fx:id="radiowoMan"	
+	ToggleGroup ì€ JavaFX Scence Builder ì—ì„œ Properties - > specificì— Toggle Groupìœ¼ë¡œ ì„¤ì •
+3. ì§€ì—­ + ì½¤ë³´ë°•ìŠ¤ë¥¼ ê·¸ë¦°ë‹¤.			fx:id="areaCombo"
+4. ì·¨ë¯¸ + ì²´í¬ë°•ìŠ¤ë¥¼ ê·¸ë¦°ë‹¤.			fx:id="chkA" fx:id="chkB"
+5. paneìœ„ì— treeViewë¥¼ ê·¸ë¦°ë‹¤.			fx:id="treeView"
+6. ë²„íŠ¼ì„ ê·¸ë¦°ë‹¤.				onAction="#onClickEvent"
+7. txtAreaë¥¼ ê·¸ë¦°ë‹¤.				fx:id="txtArea"
+8. ë²„íŠ¼ ì´ë²¤íŠ¸ onClickEvent()í•¨ìˆ˜ì— TextAreaì— ë„£ëŠ” êµ¬ë¬¸ì„ String strì— ë‹´ëŠ”ë‹¤.
+ - txtName.getText()  - > TextFieldê°’ê°€ì ¸ì˜¤ê¸° 
+ - radioGroup.getSelectedToggle().getUserData().toString()	- > ToggleGroupì˜ ì„ íƒëœ ê°’ ê°€ì ¸ì˜¤ê¸°
+ - areaCombo.getSelectionModel().getSelectedItem()=" + areaCombo.getSelectionModel().getSelectedItem() - > comboë°•ìŠ¤ ê°’ê°€ì ¸ì˜¤ê¸°
+ - areaCombo.getSelectionModel().getSelectedIndex()=" + areaCombo.getSelectionModel().getSelectedIndex() - > comboë°•ìŠ¤ indexê°’ê°€ ì ¸ì˜¤ê¸°
+ - chkA.getText()	- > ì²´í¬ë°•ìŠ¤ì˜ ê°’ê°€ì ¸ì˜¤ê¸°
+ - chkB.getText()   - > ì²´í¬ë°•ìŠ¤ì˜ ê°’ê°€ì ¸ì˜¤ê¸°
  */
 public class Test05JavaFXBaseComponentMain extends Application {
 
