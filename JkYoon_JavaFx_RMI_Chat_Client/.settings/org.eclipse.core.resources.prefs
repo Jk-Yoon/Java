@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/application/ChatController.java=UTF-8
+encoding//src/application/Main.java=UTF-8
+encoding//src/application/MainController.java=UTF-8
+encoding//src/com/rmi/chat/ChatClientService.java=UTF-8
+encoding//src/com/rmi/chat/ChatServerService.java=UTF-8
+encoding//src/com/rmi/chat/client/ChatClientServiceImpl.java=UTF-8
+encoding//src/com/rmi/chat/vo/ChatVo.java=UTF-8
+encoding/<project>=UTF-8

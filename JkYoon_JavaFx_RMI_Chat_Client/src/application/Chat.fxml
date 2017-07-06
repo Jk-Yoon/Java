@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefWidth="385.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.ChatController">
+  <!-- TODO Add Nodes -->
+  <bottom>
+    <Pane prefHeight="37.0" prefWidth="385.0">
+      <children>
+        <TextField fx:id="txtNickName" layoutX="14.0" layoutY="9.0" prefWidth="64.0" />
+        <TextField id="txt" fx:id="txtMessage" layoutX="93.0" layoutY="9.0" prefWidth="200.0" />
+        <Button fx:id="btnSend" layoutX="315.0" layoutY="10.0" mnemonicParsing="false" onAction="#onclickSend" text="전송" />
+      </children>
+    </Pane>
+  </bottom>
+  <center>
+    <TextArea fx:id="textArea" prefHeight="223.0" prefWidth="385.0000999999975" wrapText="true" />
+  </center>
+  <top>
+    <Pane prefHeight="37.0" prefWidth="385.0">
+      <children>
+        <Label fx:id="labelChat" layoutX="21.0" layoutY="14.0" text="채팅방이름:" />
+      </children>
+    </Pane>
+  </top>
+</BorderPane>

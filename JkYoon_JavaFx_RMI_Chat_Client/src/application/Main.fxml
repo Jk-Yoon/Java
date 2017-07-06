@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefWidth="380.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.MainController">
+  <!-- TODO Add Nodes -->
+  <bottom>
+    <Pane prefHeight="48.0" prefWidth="380.0">
+      <children>
+        <Button fx:id="btnReload" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#onclickRefresh" text="새로고침" />
+        <Button fx:id="btnNewRoom" layoutX="298.0" layoutY="15.0" mnemonicParsing="false" onAction="#onclickMakeChat" text="새채팅방" />
+      </children>
+    </Pane>
+  </bottom>
+  <center>
+    <TableView fx:id="tableView" prefHeight="378.0" prefWidth="380.0" />
+  </center>
+  <top>
+    <Pane prefHeight="75.0" prefWidth="380.0">
+      <children>
+        <Button fx:id="btnConnect" layoutX="315.0" layoutY="29.0" mnemonicParsing="false" onAction="#onclickConnect" text="접속" />
+        <Label fx:id="labelConnected" layoutX="59.0" layoutY="31.0" prefHeight="18.962890625" prefWidth="190.0" text="Label" />
+      </children>
+    </Pane>
+  </top>
+</BorderPane>
