@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+ <sqlMap namespace="board">
+ 
+ <!--  이런식두 있다.
+ 데이터를 select할때 VO에 매칭시켜서 담아오기 위한 설정  
+	<resultMap id="BoardVO" class="vo.BoardVO">
+		<result column="BOARD_ID" property="boardId" />
+		<result column="BOARD_TITLE" property="boardTitle" />
+		<result column="BOARD_WRITER" property="boardWriter" />
+		<result column="BOARD_DATE" property="boardDate" />
+		<result column="BOARD_CONTENT" property="boardContent" />
+	</resultMap>
+  -->
+ 
+ 	<select id="board.selectListBoard" parameterClass="application.board.vo.BoardVO" resultClass="application.board.vo.BoardVO">
+ 		/** board.selectListBoard */
+ 		SELECT  BOARD_ID	AS boardId
+			  , BOARD_TITLE AS boardTitle 
+			  , BOARD_WRITER AS boardWriter
+			  , BOARD_DATE AS boardDate
+			  , BOARD_CONTENT AS boardContent
+		FROM FX_BOARD
+		WHERE 1=1
+		<!-- 제목 -->
+		<isNotEmpty property="boardTitle">
+		AND BOARD_TITLE LIKE '%' || #boardTitle# || '%'
+		</isNotEmpty>
+		
+		<isNotEmpty property="boardWriter">
+		AND BOARD_WRITER LIKE '%' || #boardWriter# || '%'
+		</isNotEmpty>
+		ORDER BY BOARD_ID
+ 	
+ 	
+ 	</select>
+ 	
+ 	<!-- 등록 -->
+ 	<statement id="board.insertBoard" parameterClass="application.board.vo.BoardVO">
+ 		/** board.insertBoard */
+ 		INSERT INTO FX_BOARD(
+ 		 		BOARD_ID
+			  , BOARD_TITLE 
+			  , BOARD_WRITER
+			  , BOARD_DATE
+			  , BOARD_CONTENT
+ 		)
+ 		VALUES (
+ 			  ( SELECT NVL(MAX(BOARD_ID)+1,0) FROM FX_BOARD) 
+			, #boardTitle#
+			, #boardWriter#
+			, SYSDATE
+			, #boardContent#
+ 		)
+ 	</statement>
+ 	<!-- 수정 -->
+	 <statement id="board.updateBoard" parameterClass="application.board.vo.BoardVO">
+	 	/** board.updateBoard */
+	 	UPDATE FX_BOARD SET 
+	 			BOARD_TITLE = #boardTitle#
+			  , BOARD_WRITER = #boardWriter#
+			  , BOARD_DATE = SYSDATE
+			  , BOARD_CONTENT = #boardContent#
+		WHERE 	BOARD_ID = #boardId#	  
+	 	
+	 </statement>
+	 
+	 
+	 <!-- 수정 -->
+	 <statement id="board.deleteBoard" parameterClass="application.board.vo.BoardVO">
+	 	/** board.deleteBoard */
+	 	DELETE FROM FX_BOARD 
+		WHERE 	BOARD_ID = #boardId#	  
+	 	
+	 </statement>
+	 
+	 
+ 
+ 	
+ 
+ </sqlMap>

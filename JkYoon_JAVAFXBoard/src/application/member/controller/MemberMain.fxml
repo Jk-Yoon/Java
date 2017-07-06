@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.member.controller.MainController">
+  <center>
+    <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+        <TableView fx:id="tableView" layoutX="31.0" layoutY="79.0" prefHeight="336.0" prefWidth="539.0" />
+        <TextField fx:id="txtSearch" layoutX="137.0" layoutY="37.0" prefHeight="28.962890625" prefWidth="200.0" promptText="조회조건을 입력하세요" />
+        <ComboBox fx:id="comboBoxSearch" layoutX="46.0" layoutY="41.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Button fx:id="btnSearch" layoutX="511.0" layoutY="37.0" mnemonicParsing="false" prefHeight="28.962890625" prefWidth="59.0" text="조회">
+          <font>
+            <Font size="15.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button fx:id="btnInsert" font="$x1" layoutX="511.0" layoutY="437.0" mnemonicParsing="false" prefHeight="28.962890625" text="등록" />
+      </children>
+    </Pane>
+  </center>
+  <top>
+    <Pane prefHeight="66.0" prefWidth="600.0">
+      <children>
+        <Label alignment="CENTER" layoutX="65.0" layoutY="19.0" prefHeight="47.0" prefWidth="470.0" text="회원관리" textAlignment="LEFT" />
+      </children>
+    </Pane>
+  </top>
+</BorderPane>

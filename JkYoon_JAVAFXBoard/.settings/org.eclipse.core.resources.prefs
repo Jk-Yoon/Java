@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//res/log4j.properties=UTF-8
+encoding//src/application/board/Main.java=UTF-8
+encoding//src/application/board/controller/DetailController.java=UTF-8
+encoding//src/application/board/controller/MainController.java=UTF-8
+encoding//src/application/board/dao/BoardDao.java=UTF-8
+encoding//src/application/board/service/BoardService.java=UTF-8
+encoding//src/application/board/serviceimpl/BoardServiceImpl.java=UTF-8
+encoding//src/application/board/vo/BoardVO.java=UTF-8
+encoding//src/application/member/MemberMain.java=UTF-8
+encoding//src/application/member/controller/MainController.java=UTF-8
+encoding//src/application/member/dao/MemberDao.java=UTF-8
+encoding//src/application/member/vo/MemberVO.java=UTF-8
+encoding//src/ibatis/config/SqlMapConfig.java=UTF-8
+encoding/<project>=UTF-8

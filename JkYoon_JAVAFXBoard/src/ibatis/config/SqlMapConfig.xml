@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+    
+
+
+	
+    <sqlMapConfig>
+    	<!-- 접속 정보를 가져올 properties 파일 위치 지정 -->
+    	<properties resource="ibatis/config/sqlMapConfig.properties" />
+    	
+    	<!-- 
+    	cacheModelsEnabled	SqlMapClient의 캐쉬모델을 설정 한다.
+		lazyLoadingEnabled	SqlMapClient의 모든 늦은(lazy)로딩을 설정한다.
+		enhancementEnabled	CGLIB에 최적화된 클래스를 통해 향상된 늦은(lazy)로딩사용여부를 선택한다.	자바빈즈 속성접근을 위해 런타임시 바이트코드 향상을 가능하게한다. 속도개선
+		maxRequests : 동시에 SQL문을 수행할수 있는 Thread의 개수
+		maxSessions : 주어진 시간동안 활성화 될수 있는 session의 수
+		maxTransactions : 한꺼번에 startTransaction()에 들어갈수 있는 Thread의 최대 갯수.
+		useStatementNamespaces : 이세팅을 하면 sqlMap 이름과 statement이름으로 구성하게 한다. xxxx.select 이런식으로 구성할것인지
+	   	  -->
+    	<settings cacheModelsEnabled="true" 
+    			  lazyLoadingEnabled="true" 
+    			  enhancementEnabled="true"
+    			  maxRequests="32" 
+    			  maxSessions="5"
+    			  maxTransactions="5" 
+    			  useStatementNamespaces="true"
+    	/>
+    			  
+    	<transactionManager type="JDBC"  > <!-- commitRequired="true" -->
+    	<!-- <property name="DefaultAutoCommit" value="false"/>
+    	  <property name="SetAutoCommitAllowed" value="false"/> 
+    	   -->
+    		<dataSource type="SIMPLE">
+    			<property name="JDBC.Driver" value="${driver}" />
+    			<property name="JDBC.ConnectionURL" value="${url}" />
+    			<property name="JDBC.Username" value="${username}" />
+    			<property name="JDBC.Password" value="${password}" />
+    		</dataSource>
+    	</transactionManager>
+    	
+    	
+    	<sqlMap resource="ibatis/xml/board.xml"/>
+    
+    </sqlMapConfig>

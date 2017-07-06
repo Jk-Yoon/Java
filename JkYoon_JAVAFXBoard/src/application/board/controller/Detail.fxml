@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderViewPane" minHeight="235.0" minWidth="300.0" prefHeight="340.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.board.controller.DetailController">
+  <center>
+    <Pane prefHeight="282.0" prefWidth="436.0">
+      <children>
+        <TextField fx:id="txtNo" editable="false" layoutX="191.0" layoutY="47.0" prefWidth="200.0" />
+        <Label layoutX="44.0" layoutY="47.0" prefHeight="19.9628821777369" prefWidth="123.0" text="글번호" />
+        <TextField fx:id="txtTitle" layoutX="191.0" layoutY="84.0" prefWidth="200.0" />
+        <Label layoutX="44.0" layoutY="84.0" prefHeight="19.9628821777369" prefWidth="123.0" text="제목" />
+        <TextField fx:id="txtWriter" layoutX="191.0" layoutY="122.0" prefWidth="200.0" />
+        <Label layoutX="44.0" layoutY="122.0" prefHeight="19.9628821777369" prefWidth="123.0" text="작성자" />
+        <Button fx:id="btnSave" layoutX="347.0" layoutY="243.0" mnemonicParsing="false" onAction="#onclickSave" text="저장" />
+        <Button fx:id="btnCancel" layoutX="44.0" layoutY="243.0" mnemonicParsing="false" onAction="#onclickCancel" text="취소" />
+        <Label layoutX="44.0" layoutY="158.0" prefHeight="19.962890625" prefWidth="123.0" text="내용" />
+        <TextArea fx:id="txtAreaContent" layoutX="191.0" layoutY="158.0" prefHeight="79.00009999999747" prefWidth="200.0" wrapText="true" />
+      </children>
+    </Pane>
+  </center>
+  <top>
+    <Pane prefHeight="58.0" prefWidth="515.0">
+      <children>
+        <Label alignment="CENTER" layoutX="0.0" layoutY="14.0" prefHeight="28.962890625" prefWidth="450.0" text="게시판등록/수정" />
+      </children>
+    </Pane>
+  </top>
+</BorderPane>
