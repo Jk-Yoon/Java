@@ -11,7 +11,7 @@ import application.member.vo.MemberVO;
  * @class : MemberServiceImpl.java
  * @title : 
  * @author : Yoon
- * @desciption : ¸É¹ö ServiceImpl
+ * @desciption : ë§´ë²„ ServiceImpl
  */
 public class MemberServiceImpl implements MemberService {
 	
