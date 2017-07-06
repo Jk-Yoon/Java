@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mysocket.Test01ClientSocketController">
+  <children>
+    <TextArea fx:id="textArea" layoutX="44.0" layoutY="61.0" prefHeight="292.0" prefWidth="413.0" wrapText="true" />
+    <Button fx:id="btnClientConn" layoutX="44.0" layoutY="22.0" mnemonicParsing="false" onAction="#onClientConnect" text="Connect" />
+    <Label fx:id="labelConnect" layoutX="141.0" layoutY="24.0" prefHeight="19.0" prefWidth="239.0" text="Label" />
+    <TextField fx:id="nickName" layoutX="44.0" layoutY="389.0" prefWidth="111.0" promptText="닉네임" />
+    <TextField fx:id="txtField" layoutX="164.0" layoutY="389.0" onKeyPressed="#onClientKeyPressed" prefWidth="293.0" />
+  </children>
+</AnchorPane>

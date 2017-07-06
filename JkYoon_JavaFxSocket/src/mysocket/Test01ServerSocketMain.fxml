@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mysocket.Test01ServerSocketController">
+  <children>
+    <Button fx:id="btnServerStart" layoutX="45.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClickServerStart" prefWidth="111.0" text="Server Start" />
+    <Label fx:id="labelCnt" layoutX="317.0" layoutY="27.0" prefHeight="20.0" prefWidth="172.0" text="0 명" textAlignment="LEFT" />
+    <TextArea fx:id="textArea" layoutX="45.0" layoutY="66.0" prefHeight="307.0" prefWidth="393.0" wrapText="true" />
+    <TextField fx:id="inputField" layoutX="45.0" layoutY="423.0" onKeyPressed="#onPressedStart" prefWidth="393.0" />
+    <TextField fx:id="textConnection" editable="false" layoutX="168.0" layoutY="26.0" prefWidth="139.0" promptText="접속정보" />
+  </children>
+</AnchorPane>
