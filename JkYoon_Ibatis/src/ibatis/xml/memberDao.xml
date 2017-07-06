@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+ <sqlMap namespace="memberDao">
+  
+ 	
+ 	<select id="memberDao.selectListMember" parameterClass="application.member.vo.MemberVO" resultClass="application.member.vo.MemberVO">
+ 	
+ 		SELECT  MEM_ID	AS memId
+			  , MEM_PASS AS memPass 
+			  , MEM_NAME AS memName
+			  , MEM_BIR AS memBir
+			  , MEM_ADD AS memAdd
+		FROM FX_MEMBER
+		WHERE 1=1
+		<!-- 멤버명으로 조회 -->
+		<isNotEmpty property="memName">
+		AND MEM_NAME LIKE '%' || #memName# || '%'
+		</isNotEmpty>
+		<!-- 주소로 조회 -->
+		<isNotEmpty property="memAdd">
+		AND MEM_ADD LIKE '%' || #memAdd# || '%'
+		</isNotEmpty>
+		ORDER BY MEM_ID
+ 	
+ 	
+ 	</select>
+ 	
+ 	<!-- 등록 -->
+ 	<update id="memberDao.insertMember" parameterClass="application.member.vo.MemberVO">
+ 		INSERT INTO FX_MEMBER(
+ 		 	  MEM_ID
+			, MEM_PASS
+			, MEM_NAME
+			, MEM_BIR
+			, MEM_ADD
+ 		)
+ 		VALUES (
+ 			  ( SELECT NVL(MAX(MEM_ID)+1,1) FROM FX_MEMBER) 
+			, #memPass#
+			, #memName#
+			, #memBir#
+			, #memAdd#
+ 		)
+ 	</update>
+ 	<!-- 수정 -->
+	 <update id="memberDao.updateMember" parameterClass="application.member.vo.MemberVO">
+	 	UPDATE FX_MEMBER SET 
+	 			MEM_PASS = #memPass#
+			  , MEM_NAME = #memName#
+			  , MEM_BIR = #memBir#
+			  , MEM_ADD = #memAdd#
+		WHERE 	MEM_ID = #memId#	  
+	 	
+	 </update>
+	 
+	 
+	 <!-- 삭제 -->
+	 <update id="memberDao.deleteMember" parameterClass="application.member.vo.MemberVO">
+	 	DELETE FROM FX_MEMBER 
+		WHERE  MEM_ID = #memId#	  
+	 	
+	 </update>
+	  
+ </sqlMap>

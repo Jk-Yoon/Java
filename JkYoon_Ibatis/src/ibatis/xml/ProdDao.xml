@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+ <sqlMap namespace="prodDao">
+  
+ 	
+ 	<select id="prodDao.selectListProd" parameterClass="application.prod.vo.ProdVO" resultClass="application.prod.vo.ProdVO">
+ 	
+ 		SELECT 
+			  PROD_ID AS prodId
+			, PROD_NM AS prodNm
+			, PROD_PRICE AS prodPrice
+			, PROD_BUYER AS prodBuyer
+			, PROD_DETAIL AS prodDetail
+		FROM FX_PROD
+		WHERE 1=1
+		<!-- 상품명으로 조회 -->
+		<isNotEmpty property="prodNm">
+		AND PROD_NM LIKE '%' || #prodNm# || '%'
+		</isNotEmpty>
+		<!-- 상품상세로 조회 -->
+		<isNotEmpty property="prodDetail">
+		AND PROD_DETAIL LIKE '%' || #prodDetail# || '%'
+		</isNotEmpty>
+		ORDER BY PROD_ID
+ 	
+ 	
+ 	</select>
+ 	
+ 	<!-- 등록 -->
+ 	<update id="prodDao.insertProd" parameterClass="application.prod.vo.ProdVO">
+ 		INSERT INTO FX_PROD(
+ 		 	  PROD_ID
+			, PROD_NM
+			, PROD_PRICE
+			, PROD_BUYER
+			, PROD_DETAIL
+ 		)
+ 		VALUES (
+ 			  ( SELECT NVL(MAX(PROD_ID)+1,1) FROM FX_PROD) 
+			, #prodNm#
+			, #prodPrice#
+			, #prodBuyer#
+			, #prodDetail#
+ 		)
+ 	</update>
+ 	<!-- 수정 -->
+	 <update id="prodDao.updateProd" parameterClass="application.prod.vo.ProdVO">
+	 	UPDATE FX_PROD SET 
+	 			PROD_NM = #prodNm#
+			  , PROD_PRICE = #prodPrice#
+			  , PROD_BUYER = #prodBuyer#
+			  , PROD_DETAIL = #prodDetail#
+		WHERE 	PROD_ID = #prodId#	  
+	 	
+	 </update>
+	 
+	 
+	 <!-- 삭제 -->
+	 <update id="prodDao.deleteProd" parameterClass="application.prod.vo.ProdVO">
+	 	DELETE FROM FX_PROD 
+		WHERE  PROD_ID = #prodId#	
+	 	
+	 </update>
+	  
+ </sqlMap>

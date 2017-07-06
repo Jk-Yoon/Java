@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+ <sqlMap namespace="boardDao">
+ 
+ <!--  이런식두 있다.
+ 데이터를 select할때 VO에 매칭시켜서 담아오기 위한 설정  
+	<resultMap id="BoardVO" class="vo.BoardVO">
+		<result column="BOARD_ID" property="boardId" />
+		<result column="BOARD_TITLE" property="boardTitle" />
+		<result column="BOARD_WRITER" property="boardWriter" />
+		<result column="BOARD_DATE" property="boardDate" />
+		<result column="BOARD_CONTENT" property="boardContent" />
+	</resultMap>
+  -->
+  
+  
+    	<!--
+    	Vo클래스등의 이름을 사용하려면 패키지명까지 기술해야 되는데 이때 이름이 너무 길어지는 경우가 있다.
+    	이것을 간단히 표시하기 위하여 alias를 지정할수있다. [근데 나는 안쓴다. 직관성이 떨어진다.]
+    	<typeAlias alias="줄여서쓸 alias명" type="패키지명이 포함된 클래스명" /> 
+    	 -->
+    	<typeAlias alias="boardVO" type="application.board.vo.BoardVO" />
+ 
+ 	<select id="boardDao.selectListBoard" parameterClass="application.board.vo.BoardVO" resultClass="application.board.vo.BoardVO">
+ 	
+ 		SELECT  BOARD_ID	AS boardId
+			  , BOARD_TITLE AS boardTitle 
+			  , BOARD_WRITER AS boardWriter
+			  , BOARD_DATE AS boardDate
+			  , BOARD_CONTENT AS boardContent
+		FROM FX_BOARD
+		WHERE 1=1
+		<!-- 제목 -->
+		<isNotEmpty property="boardTitle">
+		AND BOARD_TITLE LIKE '%' || #boardTitle# || '%'
+		</isNotEmpty>
+		
+		<isNotEmpty property="boardWriter">
+		AND BOARD_WRITER LIKE '%' || #boardWriter# || '%'
+		</isNotEmpty>
+		ORDER BY BOARD_ID
+ 	
+ 	
+ 	</select>
+ 	
+ 	<!-- 등록 -->
+ 	<update id="boardDao.insertBoard" parameterClass="application.board.vo.BoardVO">
+ 		INSERT INTO FX_BOARD(
+ 		 		BOARD_ID
+			  , BOARD_TITLE 
+			  , BOARD_WRITER
+			  , BOARD_DATE
+			  , BOARD_CONTENT
+ 		)
+ 		VALUES (
+ 			  ( SELECT NVL(MAX(BOARD_ID)+1,0) FROM FX_BOARD) 
+			, #boardTitle#
+			, #boardWriter#
+			, SYSDATE
+			, #boardContent#
+ 		)
+ 	</update>
+ 	<!-- 수정 -->
+	 <update id="boardDao.updateBoard" parameterClass="application.board.vo.BoardVO">
+	 	UPDATE FX_BOARD SET 
+	 			BOARD_TITLE = #boardTitle#
+			  , BOARD_WRITER = #boardWriter#
+			  , BOARD_DATE = SYSDATE
+			  , BOARD_CONTENT = #boardContent#
+		WHERE 	BOARD_ID = #boardId#	  
+	 	
+	 </update>
+	 
+	 
+	 <!-- 수정 -->
+	 <delete id="boardDao.deleteBoard" parameterClass="application.board.vo.BoardVO">
+	 	DELETE FROM FX_BOARD 
+		WHERE 	BOARD_ID = #boardId#	  
+	 	
+	 </delete>
+	 
+	 
+ 	<select id="boardDao.selectListMapBoard" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+ 	
+ 		SELECT  BOARD_ID	AS boardId
+			  , BOARD_TITLE AS boardTitle 
+			  , BOARD_WRITER AS boardWriter
+			  , BOARD_DATE AS boardDate
+			  , BOARD_CONTENT AS boardContent
+		FROM FX_BOARD
+		WHERE 1=1
+		<!-- 제목 -->
+		<isNotEmpty property="boardTitle">
+		AND BOARD_TITLE LIKE '%' || #boardTitle# || '%'
+		</isNotEmpty>
+		
+		<isNotEmpty property="boardWriter">
+		AND BOARD_WRITER LIKE '%' || #boardWriter# || '%'
+		</isNotEmpty>
+		ORDER BY BOARD_ID
+ 	
+ 	
+ 	</select>
+ 	
+ 
+ </sqlMap>
