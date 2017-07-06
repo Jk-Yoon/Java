@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="collection_homework.CollectionController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ComboBox id="collectioCombo" fx:id="collectionCombo" layoutX="74.0" layoutY="23.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextArea fx:id="textArea" layoutX="74.0" layoutY="201.0" prefHeight="261.0" prefWidth="366.0" wrapText="true" />
+    <Label fx:id="comformLabel" layoutX="74.0" layoutY="73.0" prefHeight="28.0" prefWidth="366.0" text="Label" />
+    <TextField fx:id="txtName" layoutX="149.0" layoutY="112.0" prefHeight="28.0" prefWidth="200.0" />
+    <Label layoutX="81.0" layoutY="116.0" prefHeight="20.0" prefWidth="54.0" text="이름 : " />
+    <Label layoutX="81.0" layoutY="154.0" prefHeight="20.0" prefWidth="54.0" text="나이 : " />
+    <TextField fx:id="txtAge" layoutX="149.0" layoutY="150.0" prefHeight="28.0" prefWidth="200.0" />
+    <Button fx:id="addBtn" layoutX="395.0" layoutY="161.0" mnemonicParsing="false" text="추가" />
+    <Button id="searchBtn" fx:id="printBtn" layoutX="388.0" layoutY="30.0" mnemonicParsing="false" text="출력" />
+  </children>
+</AnchorPane>
